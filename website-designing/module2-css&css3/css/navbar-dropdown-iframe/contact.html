@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+      body 
+      {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;  
+      }  
+      .navbar
+      {
+       width: 100%;
+       height: auto;
+       background-color: black; 
+       display: flex;
+       flex-direction: row;
+      }  
+      .logo
+      {
+      width: 35%;
+      height: auto;
+      padding: 10px;  
+      }
+      .navbar-brand
+      {
+      font-size: 25px;
+      margin-left: 10%;
+      color: white;
+      text-decoration: none;  
+      }
+      .navbar ul li 
+      {
+      display: inline-block;
+      padding: 5px 25px;  
+      }
+      .navigation a 
+      {
+       color: white;
+       text-decoration: none;
+       font-size: 20px;  
+      }
+
+      .navigation a:hover 
+      {
+       color: coral;
+       text-decoration: none;
+       font-size: 22px;
+       transition: 0.1s ease all;
+
+      }
+      .dropdown
+      {
+       position: relative; 
+      }
+      .dropdown-menu
+      {
+       position: absolute; 
+       display: none;
+       background-color: black;
+       padding: 5px;  
+      }
+      .dropdown:hover .dropdown-menu
+      {
+       display: block; 
+      }
+      .content
+      {
+      width: 50%;
+      height: auto;
+      margin: auto;
+      padding: 25px;
+      margin-top: 5%;  
+      }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="logo">  <a href="" class="navbar-brand">Flipkart App</a>    </div>    
+    <div class="navigation">
+     <ul>
+        <li><a href="navbar-dropdown.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li class="dropdown"><a href="#">Account</a>
+        <ul class="dropdown-menu">
+            <li><a href="register.html" target="abc">Register</a></li>
+            <li><a href="login.html" target="abc">Login</a></li>
+        </ul>
+        </li>
+        <li><a href="contact.html">ContactUs</a></li>
+     </ul>
+    </div>
+    </nav>
+
+
+    <!-- create contact us page -->
+   <div class="content">
+   <h1>Contact us page</h1>
+   <hr/>
+   <div class="address">
+   <p><b>Office Address :</b>
+    101, Aditya Complex, Jalaram 2 Street Number 2, above Sbi Bank, Near Indira Circle, Jala Ram Nagar, Rajkot, Gujarat 360005
+   </p>
+
+   <p><b>Hours :</b>
+    7:30 am to 7:30 pm
+   </p>
+
+   <p><b>Phone :</b>
+   (+91) - 972402424
+   </p>
+   </div>
+  <div class="contact-form">
+
+  </div>
+ 
+   </div>
+
+    
+</body>
+</html>
