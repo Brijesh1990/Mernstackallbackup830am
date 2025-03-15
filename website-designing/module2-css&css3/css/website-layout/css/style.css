@@ -74,7 +74,12 @@ flex-direction: row;
 width: 40%;
 height: auto;
 }
-.passion-text h1 
+.naturals-text
+{
+width: 100%;
+height: auto;
+}
+.passion-text h1,.naturals-text h1 
 {
 color: #ffb361;
 font-size: 85px;
@@ -82,7 +87,7 @@ letter-spacing: 3px;
 font-weight: 900 !important;    
 line-height: 0.9;
 }
-.passion-text h2 
+.passion-text h2,.naturals-text h2 
 {
 
 color: #e63b07;
@@ -127,5 +132,66 @@ color: black;
 line-height: 0.9;
 margin-left: 12%;   
 }
-#beicecream-content{}
+#beicecream-content{
+width: 100%;
+height: auto; 
+}
+.naturals-body
+{
+    background: url('../images/bg-one.png') no-repeat;
+    background-size: cover;
+    background-position: center;      
+}
+.tradition-body
+{
+    width:100%;
+    height: auto;
+    background: url('../images/milk-bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;      
+}
+.naturals-card
+{
+width: 90%;
+height: auto;
+display: flex;
+margin: auto;
+flex-direction: row;    
+ 
+}
+.card-body
+{
+width: 25%;
+height: 400px;
+background-color: #ebe9e8;
+border-radius: 15px;
+margin: 15px;
+margin-left: 5%;
+margin-top: 10%;
+}
+.card-img img
+{
+width: 80%;
+height: auto;
+margin: auto;    
+margin-left: 10%;
+margin-top: -55%;
+}
+.card-txt{
+    margin-top: 30%;
+}
+.card-txt h1 
+{
+color: black;
+font-size: 45px;
+letter-spacing: 3px;
+font-weight: 900 !important;    
+line-height: 0.9; 
+}
+.card-txt p 
+{
+width: 80%;
+height: auto;
+margin: auto;    
+}
 #beicecream-footer{}
