@@ -1,0 +1,25 @@
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+box-sizing: border-box;
+background-color: lightgray;    
+}
+.reg-app 
+{
+width: 40%;
+height: auto;
+margin: auto;
+padding: 25px;
+background-color: white;
+color: black;    
+margin-top: 5%;
+}
+
+.reg-app a 
+{
+-webkit-animation: 5s fadeIn infinite;
+-moz-animation: 5s fadeIn infinite;
+animation: 5s fadeIn infinite;    
+}
