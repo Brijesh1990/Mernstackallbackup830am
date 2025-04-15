@@ -1,0 +1,21 @@
+what is github ?
+ Def :github is a repository management systems
+      github is a microsoft products
+      github is open source
+      github is shared private or public data 
+      github provide Live Hosting 
+  
+ upload data on github via git:
+ step1: create an account on github
+ step2: create an repository 
+ step3: download git software i.e called gitbash
+ step4: write some commnds to upload data on github
+        commands 
+        a)git init
+        b)git add .
+        c)git commit -m '15-04-2025'
+        d)git remote add origin giturl
+        e)git push -u origin master
+        
+ upload data on github via vs code : 
+  
