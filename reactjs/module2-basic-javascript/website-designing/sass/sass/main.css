@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: #6094bd;
+}
+
+html {
+  font-size: 25%;
+}
+
+.main_header {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  background-color: black;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5%;
+  font-size: 7rem;
+  color: white;
+}
+.main_header h1 {
+  color: yellow;
+  font-size: 11rem;
+}
+.main_header p {
+  color: yellow;
+  font-size: 3rem;
+}
+.main_header h1:hover {
+  color: green;
+  font-size: 11rem;
+}
+.main_header p:hover {
+  color: white;
+  font-size: 5rem;
+  transition: 2s ease all;
+}/*# sourceMappingURL=main.css.map */
