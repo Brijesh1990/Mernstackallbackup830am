@@ -1,0 +1,24 @@
+<script>
+// one parent class properties access via its one child class i.e called single inheritance
+
+class A  
+{
+    constructor(name,age)
+    {
+        this.name=name;
+        this.age=age;
+    }
+}
+class B extends A 
+{
+    constructor(name,age,address)
+    {
+        super(name,age)
+        this.address=address;
+
+    }
+}
+var obj=new B("brijesh",35,"150 feet ring road rajkot");
+console.log(obj);
+
+</script>

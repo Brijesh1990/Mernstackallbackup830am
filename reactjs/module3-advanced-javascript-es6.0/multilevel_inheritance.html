@@ -1,0 +1,47 @@
+<script>
+// one parent class properties access via its chid class and its so on so this type of inheritance is called multilevel inheritance 
+
+// A=>B=>C=>D=>E
+
+
+class A  
+{
+    constructor(name,age)
+    {
+        this.name=name;
+        this.age=age;
+    }
+}
+class B extends A 
+{
+    constructor(name,age,address)
+    {
+        super(name,age,address)
+        this.address=address;
+        
+    }
+}
+class C extends B 
+{
+       constructor(name,age,address,salary)
+    {
+        super(name,age,address)
+        this.salary=salary;
+        
+    }
+}
+
+class D extends C 
+{
+       constructor(name,age,address,salary,department)
+    {
+        super(name,age,address,salary)
+        this.department=department;
+        
+    }
+}
+
+var obj=new D("brijesh",35,"150 feet ring road rajkot",115000,"Information technology");
+console.log(obj);
+
+</script>

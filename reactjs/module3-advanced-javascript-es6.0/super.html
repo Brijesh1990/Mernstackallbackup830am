@@ -1,0 +1,25 @@
+<script>
+//super () : super is a method i.e used to access a parent class properties inside of its child class 
+//super() is used inside of inheritance in javascript  
+class Car 
+{
+    constructor(nm,model,years)
+    {
+        this.nm=nm;
+        this.model=model;
+        this.years=years;
+
+    }
+}
+class Garage extends Car 
+{
+   constructor(nm,model,years,mechanic)
+   {
+    super(nm,model,years);
+    this.mechanic=mechanic;
+   }     
+}
+
+var obj=new Garage("maruti","maruti 800",2019,"Mr atul patel");
+console.log(obj);
+</script>

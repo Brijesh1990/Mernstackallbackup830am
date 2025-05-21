@@ -1,0 +1,34 @@
+<script>
+// what is inheritance ?
+//  inheritance is used A parent class properties via its child class there we used inheritance. 
+//  or 
+//  A parent class properties used via its child class i.e called inheritance 
+// examples : A => B 
+// inheritance used via extends keyword 
+// A parent class properties access or used in javascript via super() method
+// constructor is same name of class when we called object of class constructor automatically called 
+
+
+// types of inheritance ....
+//  a) single inheritance b) multilevel inheritance c) multiple inheritance (not supported in javascript)
+class A  
+{
+    constructor(name,age)
+    {
+        this.name=name;
+        this.age=age;
+    }
+}
+class B extends A 
+{
+    constructor(name,age,address)
+    {
+            super(name,age);
+            this.address=address;
+    }
+}
+var obj=new B("brijesh",35,"150 feet ring road rajkot");
+console.log(obj);
+
+
+</script>
