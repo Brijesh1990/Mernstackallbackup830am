@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<script src='main.js'></script>
+<script>
+function display()
+{
+const parent=document.querySelectorAll(".para1");
+parent[0].style.backgroundColor="red";
+parent[1].style.backgroundColor="red";
+parent[2].style.backgroundColor="orange"; 
+parent[3].style.backgroundColor="yellow"; 
+}
+</script>
+</head>
+<body onload="display()">
+
+<p class="para1">This is a para1</p>
+<p class="para2">This is a para2</p>
+<p class="para3">This is a para3</p>
+<p class="para1">This is a para4</p>
+<p class="para5">This is a para5</p>
+<p class="para1">This is a para6</p>
+<p class="para1">This is a para7</p>
+
+</body>
+</html>

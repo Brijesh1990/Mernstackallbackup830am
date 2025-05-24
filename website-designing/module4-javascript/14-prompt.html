@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<script src='main.js'></script>
+<style>
+    #btn 
+    {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    background-color: black;
+    color: white;    
+    border: none;
+    }
+</style>
+</head>
+<body>
+<script>
+//  a=10;
+//  b=20;
+//  c=a+b;
+//  document.write(c); 
+function add()
+{
+  a=parseInt(prompt('Enter N1 number :'));
+  b=parseInt(prompt('Enter N2 number :'));
+  c=a+b;
+  alert('Additions of numbers is :'+c);  
+}
+function subs()
+{
+  a=parseInt(prompt('Enter N1 number :'));
+  b=parseInt(prompt('Enter N2 number :'));
+  c=a-b;
+  alert('Substractions of numbers is :'+c);  
+}
+
+function dv()
+{
+  a=parseInt(prompt('Enter N1 number :'));
+  b=parseInt(prompt('Enter N2 number :'));
+  c=a/b;
+  alert('Divisions of numbers is :'+c);  
+}
+</script>
+
+<button type="button" id="btn" onclick="add()">Click to Additions</button>
+
+<button type="button" id="btn" onclick="subs()">Click to Substraction</button>
+
+<button type="button" id="btn" onclick="dv()">Click to Divisions</button>
+
+</body>
+</html>

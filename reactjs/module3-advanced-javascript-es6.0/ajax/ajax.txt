@@ -1,0 +1,10 @@
+Ajax enables a web application user to interact with a web page without the interruption of constant web page reloading. Website interaction happens quickly with only portions of the page reloading and refreshing. Ajax is made up of the following technologies: XHTML and CSS for presenting information.
+
+AJAX is Based on Internet Standards
+
+XMLHttpRequest object (to exchange data asynchronously with a server) JavaScript/DOM (to display/interact with the information) CSS (to style the data) XML (often used as the format for transferring data)
+
+
+
+
+
