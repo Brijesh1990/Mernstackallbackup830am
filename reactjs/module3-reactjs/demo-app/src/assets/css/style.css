@@ -1,0 +1,29 @@
+body 
+{
+margin: 0;
+padding: 0;
+background-color: lightgray;    
+}
+
+#services
+{
+ width: 80%;
+ height: auto;
+ margin: auto;
+ padding: 25px;
+ /* display: flex;
+ flex-direction: row; */
+ display: grid;
+ grid-template-columns: auto auto;
+
+}
+
+.services1 
+{
+width: 80%;
+height: auto;
+padding: 40px;
+background-color: white;
+font-size: 18px;
+margin: 15px;    
+}
