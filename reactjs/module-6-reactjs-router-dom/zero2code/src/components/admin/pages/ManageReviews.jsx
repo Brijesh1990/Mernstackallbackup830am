@@ -1,9 +1,8 @@
 import React from 'react';
 import { MDBContainer, MDBRow } from 'mdb-react-ui-kit';
-import AdminHeader from './components/admin/AdminHeader';
-import AdminSidebar from './components/admin/AdminSidebar';
-import Dashboard from './components/admin/Dashboard';
-export default function AdminLayout() {
+import AdminHeader from '../AdminHeader';
+import AdminSidebar from '../AdminSidebar';
+export default function ManageReviews() {
   return (
     <>
       <AdminHeader />
@@ -12,8 +11,10 @@ export default function AdminLayout() {
         <MDBRow>
           {/* sidebar */}
           <AdminSidebar />
-          {/* dashboard */}
-          <Dashboard />
+          {/*Manage Customers */}
+          <div className="col-md-10 p-5 vh-100">
+            <h1>Manage All Reviews</h1>
+          </div>
         </MDBRow>
       </MDBContainer>
     </>

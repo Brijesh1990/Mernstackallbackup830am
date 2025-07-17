@@ -115,5 +115,14 @@
       "question": "How can I contact the support team?",
       "answer": "You can reach our support team via email at"
     }
+  ],
+
+  "admin-login": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "admin@123",
+      "role": "admin"
+    }
   ]
 }
