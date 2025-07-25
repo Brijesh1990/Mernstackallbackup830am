@@ -1,0 +1,19 @@
+$bg-success: green;
+$text-success: green;
+$bg-danger: red;
+$text-danger: red;
+$text-warning: yellow;
+$bg-warning: yellow;
+$margin: auto;
+$padding: auto;
+$container: 80%;
+
+.app {
+  width: $container;
+  height: auto;
+  background-color: $bg-danger;
+  color: $text-warning;
+  margin: $margin;
+  padding: $padding;
+  padding: 25px;
+}
