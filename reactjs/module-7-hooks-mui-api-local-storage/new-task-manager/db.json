@@ -1,6 +1,23 @@
 {
   "add-task": [],
-  "assignto": [],
+  "addemployee": [
+    {
+      "id": "5204",
+      "empphoto": "https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small_2x/Basic_Ui__28186_29.jpg",
+      "empname": "kishan",
+      "empage": "25",
+      "phone": "81212121215",
+      "address": "150 feet ring road rajkot"
+    },
+    {
+      "empphoto": "https://png.pngtree.com/png-clipart/20231019/original/pngtree-user-profile-avatar-png-image_13369991.png",
+      "empname": "jaimin",
+      "empage": "30",
+      "phone": "6451212121",
+      "address": "newzeland",
+      "id": "a40f"
+    }
+  ],
   "contactus": [
     {
       "id": "4c7a",
