@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios'
-import {FaSearch,FaSpeakerDeck} from 'react-icons/fa'
+import {FaSearch} from 'react-icons/fa'
 export default function App() {
   const [data,setData]=useState("");
   const [searchWord,setSearchWord]=useState("");
@@ -32,7 +32,7 @@ export default function App() {
     <div className="flex items-center justify-center mt-5">
      
       <form>
-        <input type="text" className="border-2 border-gray-300 p-2 rounded-lg focus:outline-none focus:border-blue-500" placeholder="Type a word for search..." onChange={(e)=>{setSearchWord(e.target.value);}} />
+        <input type="text" className="border-2 bg-white border-gray-300 p-2 rounded-lg focus:outline-none focus:border-blue-500" placeholder="Type a word for search..." onChange={(e)=>{setSearchWord(e.target.value);}} />
         <button type="button" onClick={()=>{getMeaning();}} className="ml-2 bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">Search <FaSearch className='inline-flex' /> </button>
       </form>
     </div>
@@ -43,7 +43,7 @@ export default function App() {
           <h2 className="text-2xl font-bold text-blue-600">{data.word}</h2>
           <p className="text-gray-600">{data.meaning}</p>
           <button onClick={playAudio} className="mt-2 bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">
-            <FaSpeakerDeck className="inline-flex" /> Play Audio
+             Play Audio <span className='text-red-600'> 🔊 </span>
           </button>
 
            <h4 className='text-center'>Part of speech</h4>
