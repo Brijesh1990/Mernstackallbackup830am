@@ -5,6 +5,15 @@ import Swal from 'sweetalert2';
 import Navbar from './Navbar';
 import Footer from './Footer';
 export default function Checkout() {
+const[data,setData]=useState([]);
+
+const navigate=useNavigate();
+// fetch data via axios.get() using useEffect hooks
+useEffect(()=>{
+axios.get(`http://localhost:8000/cart`).then((response)=>{
+setData(response.data);
+})
+},[data])      
 return (
 <>
 <Navbar />
@@ -232,8 +241,8 @@ Order Summary
 </h2>
 <div className="space-y-3 text-sm text-gray-600 mb-6">
 <div className="flex justify-between">
-<span>Items Subtotal (3)</span>
-<span className="font-medium text-gray-900">$258.99</span>
+<span>Items Subtotal ()</span>
+<span className="font-medium text-gray-900">{data.reduce((acc, item)=>acc + Number(item.newprice || 0),0).toFixed(2)}</span>
 </div>
 <div className="flex justify-between">
 <span>Shipping &amp; Handling</span>
@@ -241,12 +250,12 @@ Order Summary
 </div>
 <div className="flex justify-between">
 <span>Taxes (Estimated)</span>
-<span className="font-medium text-gray-900">$15.54</span>
+<span className="font-medium text-gray-900">NIL</span>
 </div>
 </div>
 <div className="flex justify-between text-2xl font-bold text-gray-900 pt-4 border-t border-dashed">
 <span>Order Total</span>
-<span>$274.53</span>
+<span>Rs.<label>{data.reduce((acc, item)=>acc + Number(item.newprice || 0),0).toFixed(2)}</label></span>
 </div>
 <div className="mt-6">
 <input

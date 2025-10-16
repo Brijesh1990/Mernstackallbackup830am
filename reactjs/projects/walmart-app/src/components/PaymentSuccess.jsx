@@ -1,6 +1,19 @@
-import React from 'react'
-
+import React,{useState,useEffect} from 'react'
+import axios from 'axios'
 export default function PaymentSuccess() {
+const[data,setData]=useState([]);
+// const navigate=useNavigate();
+// fetch data via axios.get() using useEffect hooks
+useEffect(()=>{
+axios.get(`http://localhost:8000/cart`).then((response)=>{
+setData(response.data);
+})
+},[data]) 
+
+// print invoice 
+const pr=()=>{
+  window.print();
+}
   return (
    <>
     <>
@@ -42,7 +55,7 @@ export default function PaymentSuccess() {
         </h3>
         <div className="flex justify-between text-gray-600">
           <span>Total Items</span>
-          <span className="font-medium">5</span>
+          <span className="font-medium">{data.length}</span>
         </div>
         <div className="flex justify-between text-gray-600">
           <span>Shipping</span>
@@ -50,12 +63,12 @@ export default function PaymentSuccess() {
         </div>
         <div className="flex justify-between text-lg font-bold text-gray-900 border-t pt-3">
           <span>Total Paid</span>
-          <span>$274.53</span>
+          <span>Rs. {data.reduce((acc, item)=>acc + Number(item.newprice || 0),0).toFixed(2)}</span>
         </div>
       </div>
       <div className="flex flex-col sm:flex-row gap-4 pt-4">
-        <button
-          onclick="window.print()"
+        <button type='button'
+          onClick={()=>{pr()}}
           className="flex-1 flex items-center justify-center bg-white border border-gray-300 hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded-full transition duration-300 shadow-md text-base"
           aria-label="Print Invoice"
         >

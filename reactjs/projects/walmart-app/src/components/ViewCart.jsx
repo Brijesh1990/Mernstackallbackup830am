@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 export default function ViewCart() {
 // destructuring of data via state 
-const[data,setData]=useState("");
+const[data,setData]=useState([]);
 const navigate=useNavigate();
 // fetch data via axios.get() using useEffect hooks
 useEffect(()=>{
@@ -106,8 +106,8 @@ Continue Shopping
 <div className="bg-gray-50 border p-6 rounded-lg shadow-lg sticky top-8">
 <h2 className="text-2xl font-bold text-gray-900 mb-4">Order Summary</h2>
 <div className="flex justify-between text-base text-gray-700 mb-2">
-<span>Subtotal (3 items)</span>
-<span className="font-medium">$258.99</span>
+<span>Subtotal ({data.length})</span>
+<span className="font-medium">Rs. {data.reduce((acc, item)=>acc + Number(item.newprice || 0),0).toFixed(2)}</span>
 </div>
 <div className="flex justify-between text-base text-gray-700 mb-2">
 <span>Shipping Estimate</span>
@@ -115,11 +115,11 @@ Continue Shopping
 </div>
 <div className="flex justify-between text-base text-gray-700 mb-4 border-b pb-4">
 <span>Tax Estimate</span>
-<span className="font-medium">$15.54</span>
+<span className="font-medium">Nil</span>
 </div>
 <div className="flex justify-between text-2xl font-bold text-gray-900 mb-6">
 <span>Order Total</span>
-<span>$274.53</span>
+<span className='text-xl'>Rs. {data.reduce((acc, item)=>acc + Number(item.newprice || 0),0).toFixed(2)}</span>
 </div>
 <Link to='/checkout'><button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-full transition duration-300 shadow-md">
 Proceed to Checkout
