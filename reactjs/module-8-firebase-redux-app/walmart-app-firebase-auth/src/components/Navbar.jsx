@@ -12,13 +12,15 @@ export default function Navbar()  {
 //get currentuser name
 const [currentUser, setCurrentUser] = useState(null);
 // Listen for authentication state changes for logout and login
-
+const navigate=useNavigate();
 useEffect(() => {
   const unsubscribe = auth.onAuthStateChanged(user => {
     setCurrentUser(user);
   });
   return () => unsubscribe();
 }, []);
+
+
 
 // Base link styling for reusability and consistent animation
 const linkClasses = "hover:text-yellow-300 transition-all duration-300 ease-in-out font-medium p-2 rounded-lg hover:bg-blue-700/50";
@@ -53,7 +55,7 @@ return (
               type='search' 
               placeholder='Search thousands of Walmart products...' 
               // Added focus ring animation for a professional look
-              className='rounded-full w-180 ms-25 p-2.5 pl-4 text-black bg-white transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-yellow-400/70 shadow-inner' 
+              className='rounded-full w-160 ms-25 p-2.5 pl-4 text-black bg-white transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-yellow-400/70 shadow-inner' 
             />
           </div>
         </li>
@@ -71,15 +73,15 @@ return (
               <li>
                 <Link to="/profile" className='flex items-center space-x-1 font-medium'>
                   <FaUser className='text-xl transition-transform duration-300 group-hover:rotate-12' />
-                  <span className="text-black">{currentUser ? currentUser.displayName : "Profile"}</span>
+                  <span className="text-white">{currentUser && currentUser.email}</span>
                 </Link>
               </li>
 
               <li>
-                <Link to="/profile" className='flex items-center space-x-1 font-medium'>
+                <button type='button' onClick={()=>navigate('/logout-here')}>
                   <FaPowerOff className='text-xl transition-transform duration-300 group-hover:rotate-12' />
-                  <span className="text-white">Logout ?</span>
-                </Link>
+                  <span className="text-white" onClick={()=>{currentUser==false}}>Logout</span>
+                </button>
               </li>
               
               </>
