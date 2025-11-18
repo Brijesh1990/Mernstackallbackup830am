@@ -1,0 +1,180 @@
+body
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+overflow-x: hidden;    
+}
+#header{
+    width: 100%;
+    height: auto;
+    padding:35px;
+    box-shadow: 1px 1px 1px 1px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+.call-us
+{
+width: 30%;
+height: auto;
+padding: 15px;
+font-size: 25px;
+}
+.search-box
+{
+    width: 50%;
+    height: auto;
+    padding: 15px;
+    font-size: 25px;
+}
+.search-box input 
+{
+width: 80%;
+height: auto;
+padding: 10px;
+
+}
+.fa-search
+{
+font-size: 30px !important;
+position: absolute;
+margin-left: -3%;
+padding: 3px;    
+}
+.social-media
+{
+    width: 20%;
+    height: auto;
+    padding: 15px;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+#navbar{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+}
+.nav
+{
+width: 100%;
+height: auto;
+
+}
+.nav ul li 
+{
+display: inline-block;
+padding: 5px 35px;
+font-size: 20px;
+text-decoration: none;
+list-style-type: none;    
+}
+.nav a 
+{
+    text-decoration: none;
+    list-style-type: none;  
+    color: white; 
+}
+#slider{
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    margin-left: 5%;
+    padding: 10px;  
+}
+.slider-img img
+{
+width: 100%;
+height: 400px;    
+}
+#content{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-left: 5%;
+    padding: 10px;
+
+}
+.products
+{
+width: 100%;
+height: 300px;
+background-color: lightgray;
+margin-top: 3%;
+}
+.blogs
+{
+    width: 100%;
+    height: 300px;
+    background-color: lightgray;
+    margin-top: 3%;
+}
+.contact-us
+{
+    width: 100%;
+    height: 300px;
+    background-color: lightgray;
+    margin-top: 3%;
+}
+.testimonials
+{
+    width: 100%;
+    height: 300px;
+    background-color: lightgray;
+    margin-top: 3%;
+}
+#footer{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.links
+{
+width: 30%;
+height: auto;
+padding: 15px;
+}
+.links ul li 
+{
+display: block;
+font-size: 20px;    
+padding: 5px 0px;   
+}
+.links a 
+{
+ text-decoration: none;
+ list-style-type: none;
+ color: white;
+
+}
+.address
+{
+
+    width: 40%;
+    height: auto;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+}
+.newsletter
+{
+
+    width: 33%;
+    height: auto;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+
+}
+.newsletter input 
+{
+padding: 10px;
+width: 350px;    
+}

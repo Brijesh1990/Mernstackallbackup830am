@@ -1,0 +1,31 @@
+<script>
+class A  
+{
+    constructor(name,age)
+    {
+        this.name=name;
+        this.age=age;
+    }
+}
+class B  
+{
+    constructor(address)
+    {
+        
+        this.address=address;
+        
+    }
+}
+class C extends A,B
+{
+    constructor(name,age,address,salary)
+    {
+        super(name,age,address)
+        this.salary=salary;
+        
+    } 
+}
+
+var obj=new C("brijesh",35,"150 feet ring road rajkot",115000);
+console.log(obj);
+</script>

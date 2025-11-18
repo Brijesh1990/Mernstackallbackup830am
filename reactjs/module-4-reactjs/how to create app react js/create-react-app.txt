@@ -1,0 +1,158 @@
+1) How to create app via npm using create-react-app :
+
+         a) download node js 
+         b) check node verson node -v
+         c) check npm or npx verson npm -v or npx -v
+         d) create react app ...
+               npm create-react-app appname
+               Note: appname should always in small case 
+         e) cd appname
+         f) how to start a server of react js 
+               npm start 
+               http://localhost:3000    
+
+           Note : In this way app performed slow and installed slow
+
+           This is used for react 15 or older version 
+ 
+         
+
+2) How to create app via npx using create-react-app :
+
+         a) download node js 
+         b) check node verson node -v
+         c) check npm or npx verson npm -v or npx -v
+         d) create react app ...
+               npx create-react-app appname
+               Note: appname should always in small case 
+         e) cd appname
+         f) how to start a server of react js 
+               npm start 
+               http://localhost:3000    
+
+           Note : In this way app performed slow and installed slow
+
+           Note : all components should be saved via .js or .jsx 
+
+           Directory of react js :  
+
+           a) .git  :command upload git folder create
+           b) node_modules : is a imp folders i.e used to install               all libraries | module | packages in this folder. 
+
+           c) src: src is our main application src where we create               all components or images or fonts or css inside of               this folders.  
+           d) public : public is used to create your main               index.html files that is render inside of src file               components via virtual dom.
+ 
+           e) .gitignore : ignore to large folders or files on                github repository when we push our app on github. 
+           f) package.json : all dependency is installed here 
+                             react js version 
+                                
+           g) package-lock.json : THis is a dublicate of package.json
+           h) readme.md : Instructions of create app and run app inside of react js        
+
+
+           How to check version of react js : 
+
+           a) go in pakcage.json 
+           
+               {
+                 "react": "^19.1.0",
+               }     
+
+           b) using command line 
+       
+              npm view react version 
+
+        
+           How to change a default PORT of react js ...
+
+            http://localhost:3000/
+
+            a) create a new file i.e .env in react app 
+               
+                 PORT=8000
+
+               http://localhost:8000/ 
+
+                 
+
+
+
+
+3) How to create app via vite using react js  :
+      what is vite ?
+        vite is a package i.e used to create a react js app and its         create and load 10x fast compare with create-react-app
+        Note : vite is even used to create app with javascript another libraries and framework.
+
+           examples : vuejs | next js | react js | angular 
+ 
+
+         a) download node js 
+         b) check node verson node -v
+         c) check npm or npx verson npm -v or npx -v
+         d) create react app via vite ...
+
+                a) npm create vite@latest 
+                   
+                b) create appname =>first-demo-app
+                c) select libraries => react js 
+                d) select language => javascript
+                e) cd first-demo-app
+                f) npm run dev 
+                g) http://localhost:5173/
+       
+
+              
+               
+          Note : In this way app performed fast and installed fast
+
+           Note : all components should be saved via  .jsx 
+
+           Directory of react js :  
+
+           a) .git  :command upload git folder create
+           b) node_modules : is a imp folders i.e used to install               all libraries | module | packages in this folder. 
+
+           c) src: src is our main application src where we create               all components or images or fonts or css inside of               this folders.  
+           d) public : public is used to create your main               index.html files that is render inside of src file               components via virtual dom.
+ 
+           e) .gitignore : ignore to large folders or files on                github repository when we push our app on github. 
+           f) package.json : all dependency is installed here 
+                             react js version 
+                                
+           g) package-lock.json : THis is a dublicate of package.json
+           h) readme.md : Instructions of create app and run app inside of react js        
+
+
+           How to check version of react js : 
+
+           a) go in pakcage.json 
+           
+               {
+                 "react": "^19.1.0",
+               }     
+
+           b) using command line 
+       
+              npm view react version 
+
+        
+           How to change a default PORT of react js ...
+
+            http://localhost:3000/
+
+            a) create a new file i.e .env in react app 
+               
+                 PORT=8000
+
+               http://localhost:8000/ 
+
+                 
+
+
+
+
+
+           
+   
+         
+                  

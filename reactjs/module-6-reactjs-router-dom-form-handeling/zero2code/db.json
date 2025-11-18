@@ -1,0 +1,128 @@
+{
+  "about-us": [
+    {
+      "id": 1,
+      "photo": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "name": "John Doe",
+      "role": "Founder & CEO",
+      "bio": "John is a visionary leader with over 20 years of experience in the tech industry. He founded our company with the mission to innovate and inspire.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/johndoe",
+        "twitter": "https://twitter.com/johndoe",
+        "github": "https://github.com"
+      }
+    }
+  ],
+
+  "contact-us": [
+    {
+      "id": 1,
+      "name": "Jane Smith",
+      "email": "b@gmail.com",
+      "phone": "+1234567890",
+      "state": "California",
+      "center": "San Francisco",
+      "message": "I would like to know more about your services and how you can help my business grow."
+    }
+  ],
+
+  "our-courses": [
+    {
+      "id": 1,
+      "title": "Web Development Bootcamp",
+      "description": "An intensive course designed to take you from beginner to job-ready in web development.",
+      "duration": "12 weeks",
+      "price": "Rs. 78,000",
+      "image": "https://images.unsplash.com/photo-1584697964194-2f8b3c5d6e0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+    }
+  ],
+
+  "our-center": [
+    {
+      "id": 1,
+      "name": "Tech Learning Center",
+      "location": "123 Tech Street, Silicon Valley, CA",
+      "description": "A state",
+      "image": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+    }
+  ],
+
+  "our-team": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "role": "Lead Instructor",
+      "photo": "https://images.unsplash.com/photo-1502685104226-7b8f0c2d3e4b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "bio": "Alice is an experienced developer and educator, passionate about teaching the next generation of tech leaders.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/alicejohnson",
+        "twitter": "https://twitter.com/alicejohnson",
+        "github": "https://github.com",
+        "facebook": "https://www.facebook.com/alicejohnson",
+        "instagram": "https://www.instagram.com/alicejohnson",
+        "youtube": "https://www.youtube.com/alicejohnson",
+        "website": "https://www.alicejohnson.com"
+      }
+    }
+  ],
+
+  "frenchise": [
+    {
+      "id": 1,
+      "name": "Jean Dupont",
+      "role": "Directeur Technique",
+      "photo": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "bio": "Jean est un leader technique avec plus de 15 ans d'expérience dans l'industrie du logiciel.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/jeandupont",
+        "twitter": "https://twitter.com/jeandupont",
+        "github": "https://github.com"
+      }
+    }
+  ],
+
+  "blogs": [
+    {
+      "id": 1,
+      "title": "The Future of Web Development",
+      "content": "Web development is evolving rapidly with new technologies and frameworks. In this blog, we explore the latest trends and what they mean for developers.",
+      "author": "Alice Johnson",
+      "date": "2023-10-01",
+      "image": "https://images.unsplash.com/photo-1584697964194-2f8b3c5d6e0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+    }
+  ],
+
+  "placements": [
+    {
+      "id": 1,
+      "studentname": "Michael Brown",
+      "company": "Tech Innovators Inc.",
+      "position": "Software Engineer",
+      "location": "San Francisco, CA",
+      "date": "2023-09-15",
+      "description": "A leading tech company specializing in innovative software solutions."
+    }
+  ],
+
+  "FAQs": [
+    {
+      "id": 1,
+      "question": "What is the duration of the Web Development Bootcamp?",
+      "answer": "The Web Development Bootcamp lasts for 12 weeks, with classes held three times a week."
+    },
+    {
+      "id": 2,
+      "question": "How can I contact the support team?",
+      "answer": "You can reach our support team via email at"
+    }
+  ],
+
+  "admin-login": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "admin@123",
+      "role": "admin"
+    }
+  ]
+}

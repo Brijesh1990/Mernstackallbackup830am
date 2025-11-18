@@ -1,0 +1,70 @@
+body 
+{
+margin: 0;
+padding: 0;
+background-color: yellowgreen;    
+}
+::placeholder
+{
+color: red !important;    
+}
+.navbar-links
+{
+width: 100%;
+height: auto;    
+}
+.navbar-links li 
+{
+display: inline-block;
+padding: 0px 25px;    
+list-style-type: none;    
+}
+.navbar-links a 
+{
+color: white;
+text-decoration: none;
+
+}
+.call-us
+{
+display: block !important;    
+}
+.navbar-brand 
+{
+display: none;
+}
+
+@media only screen and (min-width:320px) and (max-width:580px)
+{
+.container 
+{
+width: 100% !important;
+height: auto;
+margin-top: 15% !important;    
+} 
+.task,
+.cart-app,
+.call-us
+{
+display: none !important;    
+}   
+.navbar-brand 
+{
+ display: block !important;   
+}
+
+.navbar-links li 
+{
+display: block;
+padding: 10px 5px;    
+list-style-type: none;    
+}
+.cart-app1
+{
+display: block;  
+background-color: white !important;
+color: black !important;  
+margin-left: 0 !important;
+}
+
+}

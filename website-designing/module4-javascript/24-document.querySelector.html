@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<script src='main.js'></script>
+<script>
+function display()
+{
+  document.querySelector("p").style="background-color:red;color:white";
+  document.querySelector("#para").style="background-color:green;color:white";
+  document.querySelector(".para1").style="background-color:coral;color:white";
+}
+</script>
+</head>
+<body onload="display()">
+<p>This is a query selector(access element selector)</p>
+<p id="para">This is a query selector(access id selector)</p>
+<p class="para1">This is a query selector(access class selector)</p>
+</body>
+</html>

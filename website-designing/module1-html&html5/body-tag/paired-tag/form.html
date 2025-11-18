@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form id="frm" name="frm" action="welcome.html" enctype="multipart/form-data" method="post">
+    <fieldset> 
+    <legend>Register Form</legend>   
+     <label>Enter Name *</label>
+     <input type="text" placeholder="Name *" required />
+     <br><br>
+     <label>Enter Email *</label>
+     <input type="text" placeholder="Email *" required />
+     <br><br>
+     <label>Enter Gender *</label>
+     Male :<input type="radio" name="gender" value="male">
+     Female :<input type="radio" name="gender" value="female">
+     Other :<input type="radio" name="gender" value="other">
+     <br><br>
+     <label>select technologies</label>
+     PHP :<input type="checkbox" name="tech" value="php">
+     asp.net :<input type="checkbox" name="tech" value="asp.net">
+     React :<input type="checkbox" name="tech" value="react">
+     Node :<input type="checkbox" name="tech" value="node"> 
+     <br><br>
+     <label>select state</label>
+     <select name="state">
+        <option>-select state-</option>
+        <option value="1">Gujrat</option>
+        <option value="2">Madhya Pradesh</option>
+        <option value="3">Rajsthan</option>
+        <option value="4">Uttar pradesh</option>
+        <option value="5">Mahrastra</option>
+     </select>
+     <br><br>
+     <label>Upload your Photo</label>
+     <input type="file" name="photo">
+     <br><br>
+     <input type="submit" value="Add Data">
+     </fieldset>
+    </form>
+    
+</body>
+</html>

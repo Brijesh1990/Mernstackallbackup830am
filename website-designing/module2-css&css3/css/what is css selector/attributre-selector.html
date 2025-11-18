@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+    .frm 
+    {
+     width: 50%;
+     height: auto;
+     margin: auto;
+    }
+    input[type="text"]
+    {
+     width: 350px;
+     height: auto;
+     background-color: lightgray;
+     padding: 12px;
+     border: none;   
+    }
+    input[type="number"]
+    {
+     width: 350px;
+     height: auto;
+     background-color: lightgray;
+     padding: 12px;
+     border: none;   
+    }
+    input[type="password"]
+    {
+     width: 350px;
+     height: auto;
+     background-color: lightgray;
+     padding: 12px;
+     border: none;   
+    }
+    input[type="submit"]
+    {
+     width: 150px;
+     height: auto;
+     background-color: blue;
+     padding: 12px;
+     border: none;   
+     color: white;
+     font-size: 20px;
+    }
+
+    input[type="reset"]
+    {
+     width: 150px;
+     height: auto;
+     background-color: red;
+     padding: 12px;
+     border: none;   
+     color: white;
+     font-size: 20px;
+    }
+
+    ::placeholder
+    {
+        color: red;
+        font-size: 15px;
+    }
+    </style>
+   
+</head>
+<body>
+
+    <div class="frm">
+        <h1>Register Form</h1>
+    <form>
+        <input type="text" name="name" placeholder="Name *" />
+        <br><br>
+        <input type="text" name="fname" placeholder="FirstName *" />
+        <br><br>
+        <input type="text" name="lname" placeholder="LastName *" />
+        <br><br>
+        <input type="number" name="age" placeholder="Age *" />
+        <br><br>
+        <input type="password" name="password" placeholder="password *" />
+        <br><br>
+        <input type="submit" name="reg" value="Register" placeholder="Name *" />
+        <input type="reset" name="reset" value="Reset" placeholder="Name *" />
+        
+    </form>
+    </div>
+</body>
+</html>

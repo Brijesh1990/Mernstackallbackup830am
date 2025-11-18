@@ -1,0 +1,62 @@
+<script>
+    // map : map is a array function that can be used to work as a loop but map each values of array and returns as list. 
+
+    // syntax : 
+    //   map(callback, array);
+    //   callback : is a function that will be called for each element of array.
+    //   array : is an array of elements.
+    //   return : new array with the results of calling callback on every element in array.
+
+    // let employee =["brijesh","jimil","jay","kaushik","himanshu"];
+    // let salary = employee.map(emp => emp + " : " + 50000);
+    // console.log(salary);  // output : ["brijesh : 50000", "jimil : 50000", "jay : 50000", "kaushik : 50000", "himanshu : 50000"]
+
+
+    // let employee =["brijesh","jimil","jay","kaushik","himanshu"];
+    
+    // employee.map(display);
+    // function display(emp){
+    //     console.log(emp);
+    // }
+
+
+    // filter : filter is used to filter data from array and return values conditonally
+
+    // syntax : 
+    //   filter(callback, array);
+    //   callback : is a function that will be called for each element of array.
+    //   array : is an array of elements.
+    //   return : new array with all elements that pass the test implemented by the provided function.
+
+    // let employee =["brijesh","jimil","jay","kaushik","himanshu"];
+    // let salary = employee.filter(emp => emp.length > 5);
+    // console.log(salary);  // output : ["brijesh", "jay", "kaushik", "himanshu"]
+
+
+     
+    //   let employee =["brijesh","jimil","jay","kaushik","himanshu"];
+
+    //   employee.filter(display);
+    //   function display(emp){
+    //       console.log(emp);
+    //   }
+      // output : brijesh, jimil, jay, kaushik, himanshu
+
+
+    //   let category=["electronics","shoes","shirts"];
+    //   let item = ["laptop","saree","t-shirt"];
+    //   let product = category.map(cat => ({category: cat, items: item.filter(it => it.includes(cat))}));
+
+    //   console.log(product);  // output : [{category: "electronics", items: ["laptop"]}, {category: "shoes", items: ["saree"]}, {category: "shirts", items: ["t-shirt"]}]
+
+   let employee =["brijesh","jimil","jay","kaushik","himanshu"];
+   let age=[24,25,28,35,29];
+   let employeeDetail = employee.map((emp, index) => ({name: emp, age: age[index]}));
+   console.log(employeeDetail);  // output : [{name: "brijesh", age: 24}, {name: "jimil", age: 25}, {name: "jay", age: 28}, {name: "kaushik", age: 35}, {name: "himanshu", age: 29}]
+
+
+
+   
+
+
+</script>

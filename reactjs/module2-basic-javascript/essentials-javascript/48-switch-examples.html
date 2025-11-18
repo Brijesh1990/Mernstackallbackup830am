@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Examples</title>
+</head>
+<body>
+    <h1>Switch Examples in JavaScript</h1>
+    <script>
+        // Example 1: Basic Switch Statement
+        let day = 3;
+        switch (day) {
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            case 3:
+                console.log("Wednesday");
+                break;
+            case 4:
+                console.log("Thursday");
+                break;
+            case 5:
+                console.log("Friday");
+                break;
+            case 6:
+                console.log("Saturday");
+                break;
+            case 7:
+                console.log("Sunday");
+                break;
+            default:
+                console.log("Invalid day");
+        }
+
+        // Example 2: Grouping Cases
+        let fruit = "apple";
+        switch (fruit) {
+            case "apple":
+            case "banana":
+            case "cherry":
+                console.log("This is a fruit.");
+                break;
+            default:
+                console.log("Unknown item.");
+        }
+
+        // Example 3: Using Switch with Numbers
+        let number = 10;
+        switch (true) {
+            case number < 5:
+                console.log("Number is less than 5");
+                break;
+            case number >= 5 && number <= 10:
+                console.log("Number is between 5 and 10");
+                break;
+            case number > 10:
+                console.log("Number is greater than 10");
+                break;
+            default:
+                console.log("Invalid number");
+        }
+    </script>
+</body>
+</html>

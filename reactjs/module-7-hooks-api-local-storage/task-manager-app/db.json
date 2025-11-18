@@ -1,0 +1,78 @@
+{
+  "add-task": [
+    {
+      "id": "4d1f",
+      "taskname": "angular crud app",
+      "users": "kishan",
+      "taskdate": "2025-09-02",
+      "taskstatus": "completed"
+    },
+    {
+      "id": "fdc8",
+      "taskname": "laravel sanctum rest api",
+      "users": "jimil",
+      "taskdate": "2025-09-02",
+      "taskstatus": "completed"
+    },
+    {
+      "id": "ccd6",
+      "taskname": "React js localStorage crud app via api",
+      "users": "divesh",
+      "taskdate": "2025-09-02",
+      "taskstatus": "completed"
+    },
+    {
+      "id": "6e83",
+      "taskname": "create an online examination and generated result via api",
+      "users": "bhumika",
+      "taskdate": "2025-09-02",
+      "taskstatus": "completed"
+    },
+    {
+      "id": "cec1",
+      "taskname": "create a giant chart and fecth a live data in chart via app",
+      "users": "kishan",
+      "taskdate": "2025-09-02",
+      "taskstatus": "completed"
+    },
+    {
+      "id": "ad3a",
+      "taskname": "abcd",
+      "users": "jimil",
+      "taskdate": "2024-08-31",
+      "taskstatus": "completed"
+    },
+    {
+      "id": "99af",
+      "taskname": "nero engineering",
+      "users": "kishan",
+      "taskdate": "2024-08-01",
+      "taskstatus": "completed"
+    },
+    {
+      "id": "ab69",
+      "taskname": "orange app",
+      "users": "jimil",
+      "taskdate": "2023-07-31",
+      "taskstatus": "completed"
+    }
+  ],
+  "assign-to": [
+    {
+      "id": "1",
+      "users": "kishan"
+    },
+    {
+      "id": "2",
+      "users": "jimil"
+    },
+    {
+      "id": "3",
+      "users": "divesh"
+    },
+    {
+      "id": "4",
+      "users": "bhumika"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+body 
+{
+background-color: aliceblue;    
+}
+#bill
+{
+ width: 60%;
+ height: auto;
+ margin: auto;   
+}
+#btn
+{
+width: 20%;
+height: auto;
+padding: 15px;
+background-color: red;
+border: none;    
+color: white;
+}

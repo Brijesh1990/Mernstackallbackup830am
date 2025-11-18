@@ -1,0 +1,11 @@
+div
+{
+width: 50%;
+height: auto; 
+margin: auto;
+padding: 20px;
+margin-top: 5%;
+color: blue;
+background-color: lightgray;
+border: solid 2px red;
+}

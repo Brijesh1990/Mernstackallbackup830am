@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<script src='main.js'></script>
+<style>
+body 
+{
+margin: 0;
+padding: 0;    
+}    
+.links
+{
+width: 100%;
+height: auto;
+margin: auto;
+background-color: black;    
+}    
+.links ul 
+{
+margin: 0;
+padding: 0;
+top: 0;    
+}
+.links ul li 
+{
+display: inline-block;
+padding: 20px 45px;    
+}
+.links a 
+{
+ color: white;
+ font-size: 22px;
+ text-decoration: none;
+ text-transform: uppercase;   
+}
+
+/* pseudo class selector */
+.links a:link
+{
+color: yellowgreen;
+}
+.links a:active
+{
+color: white;
+}
+.links a:hover
+{
+color: red;
+}
+/* .links a:visited
+{
+color: coral;
+} */
+.active
+{
+ border: solid 1px red;
+ padding: 10px;   
+}
+
+</style>
+</head>
+<body>
+<div class="links">
+<ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">about</a></li>
+    <li><a href="#">services</a></li>
+    <li><a href="#">contact</a></li>
+    <li><a href="#">gallery</a></li>
+    <li><a href="#">account</a></li>
+</ul>
+</div>
+</body>
+</html>

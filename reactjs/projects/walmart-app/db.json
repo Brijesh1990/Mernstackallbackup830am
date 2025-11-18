@@ -1,0 +1,142 @@
+{
+  "category": [
+    {
+      "id": "bc8e",
+      "categoryname": "kids shoes"
+    },
+    {
+      "id": "7674",
+      "categoryname": "Kids toys"
+    },
+    {
+      "id": "c0f8",
+      "categoryname": "Kids shirts"
+    },
+    {
+      "id": "5edb",
+      "categoryname": "kids T-shirts"
+    },
+    {
+      "id": "7f38",
+      "categoryname": "Kids paint"
+    }
+  ],
+  "products": [
+    {
+      "id": "21c0",
+      "categoryname": "Kids shirts",
+      "photo": "https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/6/f/9/6-7-years-ss011-gen-alfa-original-imahe4mbhrghnmzg.jpeg?q=70",
+      "productname": "boys fit sports shirts",
+      "oldprice": "449",
+      "newprice": "349",
+      "addedate": "30-09-2025",
+      "qty": "1",
+      "descriptions": "Your little champ is sure to look cool in this grey printed shirt from Ruff. Tailored in cotton fabric with cutaway collar and full sleeves."
+    },
+    {
+      "id": "8b05",
+      "categoryname": "kids shoes",
+      "photo": "https://rukminim2.flixcart.com/image/612/612/xif0q/kids-shoe/f/o/k/11c-brazil-kidy-nblue-crazyly-original-imahfcuzzewnhvhb.jpeg?q=70",
+      "productname": "Kids less running shoes",
+      "oldprice": "559",
+      "newprice": "459",
+      "addedate": "30-09-2025",
+      "qty": "1",
+      "descriptions": "Your little champ is sure to look cool in this grey printed shirt from Ruff. Tailored in cotton fabric with cutaway collar and full sleeves."
+    },
+    {
+      "id": "a084",
+      "categoryname": "Kids toys",
+      "photo": "https://rukminim2.flixcart.com/image/612/612/xif0q/stuffed-toy/w/f/g/4-feet-pink-teddy-bear-high-quality-neck-brow-cute-and-soft-original-imah95znnbfz89pb.jpeg?q=70",
+      "productname": "kids teds stree 4 feet tedde bear ",
+      "oldprice": "459",
+      "newprice": "259",
+      "addedate": "30-09-2025",
+      "qty": "1",
+      "descriptions": "kids teds stree 4 feet tedde bear "
+    },
+    {
+      "id": "2ae9",
+      "categoryname": "Kids toys",
+      "photo": "https://rukminim2.flixcart.com/image/612/612/xif0q/stuffed-toy/4/t/j/reversible-rabbit-strawberry-stuffed-with-smile-ball-toy-toy144-original-imahd3qwwcutvcck.jpeg?q=70",
+      "productname": "RSS tiny zip binny toys",
+      "oldprice": "855",
+      "newprice": "655",
+      "addedate": "30-09-2025",
+      "qty": "1",
+      "descriptions": "RSS tiny zip binny toys"
+    },
+    {
+      "id": "0177",
+      "categoryname": "Kids toys",
+      "photo": "https://rukminim2.flixcart.com/image/612/612/l4x2rgw0/stuffed-toy/f/y/3/big-size-plush-husky-dog-stuffed-animal-soft-toy-gifts-for-kids-original-imagfppmqbzhrmjb.jpeg?q=70",
+      "productname": "Kids Husky dog toys",
+      "oldprice": "955",
+      "newprice": "900",
+      "addedate": "30-09-2025",
+      "qty": "1",
+      "descriptions": "Not even the biggest snowbank can keep our plush Husky dog from his goal! With his exuberant energy and handsome grey and white coat, has got what it takes to traverse the toughest trails in the snowiest backcountry. Featuring a thick, soft coat of plush fur and an engaging stand up pose, this Husky is a perfect stuffed animal for cuddly hugs or playtime adventures. Alert eyes and a generously fringed fluffy tail add to realistic, playful appearance. Bring home this courageous, cold-loving plush pup and he'll be your warm, cuddly companion!"
+    },
+    {
+      "id": "5e4b",
+      "categoryname": "Kids shirts",
+      "photo": "https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-shirt/5/m/1/8-9-years-skurta-1-kiyatra-original-imah7zfcbgkphyfd.jpeg?q=70",
+      "productname": "Kids regular fit shirt",
+      "oldprice": "450",
+      "newprice": "350",
+      "addedate": "04/10/2025",
+      "qty": "1",
+      "descriptions": "Cotton Blend fit for boys regular in price best in quality"
+    },
+    {
+      "id": "c289",
+      "categoryname": "kids T-shirts",
+      "photo": "https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/j/g/9/4-5-years-kids-755-bhizy-original-imahdhpdwhfmdwxa.jpeg?q=70",
+      "productname": "boys regular fit color black",
+      "oldprice": "855",
+      "newprice": "655",
+      "addedate": "04/10/2025",
+      "qty": "1",
+      "descriptions": "Cotton Blend fit for boys regular in price best in quality"
+    },
+    {
+      "id": "3151",
+      "categoryname": "Kids toys",
+      "photo": "https://rukminim2.flixcart.com/image/612/612/ki7qw7k0-0/stuffed-toy/y/n/i/6-feet-lime-green-new-cute-soft-teddy-bear-for-kids-and-girls-original-imafy2aj5a9zbmjy.jpeg?q=70",
+      "productname": "toys guru teddy bear",
+      "oldprice": "1055",
+      "newprice": "755",
+      "addedate": "04/10/2025",
+      "qty": "1",
+      "descriptions": "Cotton Blend fit for boys regular in price best in quality"
+    }
+  ],
+  "cart": [
+    {
+      "id": "7582",
+      "categoryname": "Kids toys",
+      "photo": "https://rukminim2.flixcart.com/image/612/612/ki7qw7k0-0/stuffed-toy/y/n/i/6-feet-lime-green-new-cute-soft-teddy-bear-for-kids-and-girls-original-imafy2aj5a9zbmjy.jpeg?q=70",
+      "productname": "toys guru teddy bear",
+      "oldprice": "1055",
+      "newprice": "755",
+      "addedate": "04/10/2025",
+      "qty": "1",
+      "descriptions": "Cotton Blend fit for boys regular in price best in quality"
+    },
+    {
+      "id": "2e88",
+      "categoryname": "Kids toys",
+      "photo": "https://rukminim2.flixcart.com/image/612/612/xif0q/stuffed-toy/w/f/g/4-feet-pink-teddy-bear-high-quality-neck-brow-cute-and-soft-original-imah95znnbfz89pb.jpeg?q=70",
+      "productname": "kids teds stree 4 feet tedde bear ",
+      "oldprice": "459",
+      "newprice": "259",
+      "addedate": "30-09-2025",
+      "qty": "1",
+      "descriptions": "kids teds stree 4 feet tedde bear "
+    }
+  ],
+  "orders": [],
+  "bills": [],
+  "contactus": [],
+  "reviews": []
+}

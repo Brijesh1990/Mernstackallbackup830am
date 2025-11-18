@@ -1,0 +1,490 @@
+body
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+box-sizing: border-box;
+background-color: lightgray;
+}
+
+#header
+{
+width: 100%;
+height: auto;
+padding: 10px;
+background-color: white;   
+display: flex;
+flex-direction: row; 
+}
+.call-us
+{
+width: 30%;
+height: auto;
+padding: 15px;
+font-size: 25px;
+}
+.search-box
+{
+width: 50%;
+height: auto;
+padding: 15px;
+}
+.search-box input 
+{
+width: 90%;
+height: auto;
+padding: 8px;    
+}
+.account-app
+{
+width: 20%;
+height: auto;
+padding: 15px;
+}
+.account-app button 
+{
+width: 50%;
+height: auto;
+padding: 8px;    
+background-color: black;
+color: white;
+border: none;
+}
+#navbar
+{
+width: 100%;
+height: auto;
+padding: 5px;
+background-color: black;    
+display: flex;
+flex-direction: row;
+}
+.logo
+{
+width: 30%;
+height: auto;
+padding: 5px;
+color: white;
+}
+.navbar
+{
+width: 70%;
+height: auto;
+padding: 5px;
+}
+.navbar ul li 
+{
+display: inline-block;
+padding: 0px 30px;
+font-size: 20px;    
+}
+.navbar a 
+{
+text-decoration: none;
+color: white;    
+}
+.toggler
+{
+display: none;    
+}
+#banner-app
+{
+width: 90%;
+height: auto;
+margin: auto;
+margin-top: 2%;
+}
+#banner-app img 
+{
+width: 100%;
+height: 400px;
+
+}
+#page-banner-app
+{
+width: 90%;
+height: auto;
+margin: auto;
+margin-top: 2%;
+padding: 15px;
+color: white;
+font-size: 20px;
+background: url('../images/PAGE-BANNER1.jpg') no-repeat;
+background-size: cover;
+background-position: center;
+}
+#content-app
+{
+width: 90%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+padding: 15px;
+}
+#content-app h1 
+{
+font-size: 40px !important;
+text-align: center;    
+}
+#content-app hr 
+{
+width: 30%;
+height: auto;
+border: dotted 4px black;    
+}
+.prod-app
+{
+width: 100%;
+height: auto; 
+padding: 10px;
+display: grid;
+grid-template-columns: auto auto auto auto;   
+}
+
+.prod 
+{
+width: 90%;
+height: auto;
+padding: 5px;
+margin-top: 3%;
+background-color: white;    
+}
+.prod img 
+{
+width: 70%;
+height: 200px;    
+}
+.contact 
+{
+width: 100%;
+height: auto;
+display: flex;
+flex-direction: row;    
+}
+.address,
+.contact-form
+{
+width: 50%;
+height: auto;
+padding: 15px;
+background-color: transparent;
+font-size: 25px;    
+margin-left: 2%;
+}
+.contact-form form 
+{
+margin-top: 8%;    
+}
+.contact-form input[type="text"]
+{
+width: 80%;
+height: auto;
+padding: 12px;
+border: none;    
+}
+.contact-form textarea
+{
+width: 80%;
+height: auto;
+padding: 12px;
+border: none;    
+}
+.contact-form input[type="submit"]
+{
+width: 35%;
+height: auto;
+padding: 15px;
+border: none;
+background-color: black;
+color: white;    
+}
+.contact-form input[type="reset"]
+{
+width: 35%;
+height: auto;
+padding: 15px;
+border: none;
+background-color: red;
+color: white;    
+margin-left: 2%;
+}
+
+#footer
+{
+width: 100%;
+height: auto;
+background-color: black;
+color: white;
+margin-top: 5%;
+padding: 25px;   
+}
+.footer-content
+{
+display: flex;
+flex-direction: row;     
+}
+.page-links,
+.footer-address,
+.newsletter
+{
+width: 33%;
+height: auto;
+padding: 10px;
+color: white;
+font-size: 20px;
+}
+.page-links ul li 
+{
+display: block;
+font-size: 20px;    
+list-style-type: none;
+}
+.page-links a 
+{
+text-decoration: none;
+color: white;    
+}
+.newsletter input 
+{
+width: 80%;
+height: auto;
+padding: 10px;    
+}
+.newsletter .fa 
+{
+font-size: 40px;
+letter-spacing: 15px;
+margin-top: 3%;    
+}
+.copyright 
+{
+text-align: center;
+font-size: 20px;    
+}
+
+/* for mobile max-width media query in css3 */
+@media only screen and (max-width:580px)
+{
+body
+{
+margin: 0;
+padding: 0;
+width: 100%;
+height: auto;
+overflow-x: hidden;
+box-sizing: border-box;
+background: url('../images/background.png') no-repeat;
+/* background-size: cover !important; */
+background-size: cover !important;
+background-position: center;
+}
+
+#header
+{
+width: 100%;
+height: auto;
+padding: 0px;
+background-color: white;   
+/* display: grid;
+grid-template-columns: auto auto;  */
+display: block;
+}
+.call-us
+{
+width: 100%;
+height: auto;
+padding: 5px;
+font-size: 25px;
+text-align: center;
+}
+.search-box
+{
+width: 80%;
+height: auto;
+margin: auto;
+padding: 5px;
+}
+.search-box input 
+{
+width: 100%;
+height: auto;
+margin: auto;
+padding: 8px;    
+}
+.account-app
+{
+width: 100%;
+height: auto;
+padding: 5px;
+}
+.account-app button 
+{
+width: 40%;
+height: auto;
+margin-left: 30%;
+padding: 8px;    
+background-color: black;
+color: white;
+border: none;
+}
+#navbar
+{
+width: 100%;
+height: auto;
+padding: 5px;
+background-color: black;    
+display: grid;
+grid-template-columns: auto auto;
+}
+.logo
+{
+width: 100%;
+height: auto;
+padding: 5px;
+color: white;
+}
+.navbar
+{
+width: 100%;
+height: auto;
+padding: 5px;
+}
+.navbar ul li 
+{
+display: inline-block;
+padding: 0px 30px;
+font-size: 20px;    
+}
+.navbar a 
+{
+text-decoration: none;
+color: white;    
+}
+.collapse
+{
+display: none !important;    
+}
+.toggler
+{
+display: block;
+width: 30%;
+height: 50px;
+margin-top: 5%;
+margin-left: 55%;
+background-color: black;
+box-shadow: 1px 1px 1px white;    
+}
+.fa-th
+{
+color: white !important;    
+font-size: 30px !important;
+}
+.toggler:hover .collapse ul li
+{
+display: block !important;    
+}    
+#banner-app
+{
+width: 90%;
+height: auto;
+margin: auto;
+margin-top: 2%;
+}
+#banner-app img 
+{
+width: 100%;
+height: 200px;
+}
+
+#content-app h1 
+{
+font-size: 25px !important;
+text-align: center;    
+color: white;
+}
+#content-app hr 
+{
+width: 30%;
+height: auto;
+border: dotted 4px white;    
+}
+.prod-app
+{
+width: 100%;
+height: auto; 
+padding: 10px;
+display: grid;
+grid-template-columns: auto auto;   
+}
+
+.prod 
+{
+width: 90%;
+height: auto;
+padding: 5px;
+margin-top: 3%;
+background-color: white;    
+}
+.prod img 
+{
+width: 70%;
+height: 200px;    
+}
+.contact 
+{
+width: 100%;
+height: auto;
+display: block;
+color: white;    
+}
+.address,
+.contact-form
+{
+width: 100%;
+height: auto;
+padding: 15px;
+background-color: transparent;
+font-size: 25px;    
+margin-left: 2%;
+}
+.contact-form input[type="text"]
+{
+width: 85%;
+height: auto;
+padding: 12px;
+border: none;    
+}
+.contact-form textarea
+{
+width: 85%;
+height: auto;
+padding: 12px;
+border: none;    
+}
+.contact-form input[type="submit"]
+{
+width: 35%;
+height: auto;
+padding: 15px;
+border: none;
+background-color: white;
+color: black;    
+}
+
+.footer-content
+{
+display: block !important;   
+margin: 0px;
+padding: 0px;  
+}
+.page-links,
+.footer-address,
+.newsletter
+{
+width: 100%;
+height: auto;
+padding: 10px;
+color: white;
+font-size: 20px;
+}
+}

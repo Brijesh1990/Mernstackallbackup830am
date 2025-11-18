@@ -1,0 +1,93 @@
+{
+  "add-task": [],
+  "addemployee": [
+    {
+      "id": "5204",
+      "empphoto": "https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small_2x/Basic_Ui__28186_29.jpg",
+      "empname": "kishan",
+      "empage": "25",
+      "phone": "81212121215",
+      "address": "150 feet ring road rajkot"
+    },
+    {
+      "empphoto": "https://png.pngtree.com/png-clipart/20231019/original/pngtree-user-profile-avatar-png-image_13369991.png",
+      "empname": "jaimin",
+      "empage": "30",
+      "phone": "6451212121",
+      "address": "newzeland",
+      "id": "a40f"
+    }
+  ],
+  "contactus": [
+    {
+      "id": "4c7a",
+      "name": "brijesh",
+      "email": "bkpandey.pandey@gmail.com",
+      "phone": "9998003879",
+      "message": "hi"
+    },
+    {
+      "id": "41d0",
+      "name": "kishan",
+      "email": "kishanbhuva99@gmail.com",
+      "phone": "63857898",
+      "message": "hi brijesh can u send me a customer care numbers"
+    },
+    {
+      "id": "9e93",
+      "name": "kumar",
+      "email": "kumar@gmail.com",
+      "phone": "9998003879",
+      "message": "hi"
+    },
+    {
+      "id": "9139",
+      "name": "kumar",
+      "email": "kumar@gmail.com",
+      "phone": "942122121",
+      "message": "hi"
+    },
+    {
+      "id": "5530",
+      "name": "lokesh",
+      "email": "lokesh@gmail.com",
+      "phone": "92212121212",
+      "message": "hi"
+    },
+    {
+      "id": "86f1",
+      "name": "kk",
+      "email": "kumar@gmail.com",
+      "phone": "hi",
+      "message": "ji"
+    },
+    {
+      "id": "1a47",
+      "name": "k",
+      "email": "kumar@gmail.com",
+      "phone": "hi",
+      "message": "hi"
+    },
+    {
+      "id": "03bd",
+      "name": "jimil",
+      "email": "jimil@gmail.com",
+      "phone": "85211212121",
+      "message": "hi"
+    },
+    {
+      "id": "394f",
+      "name": "lokesh",
+      "email": "lokesh@gmail.com",
+      "phone": "hi",
+      "message": "hi"
+    },
+    {
+      "id": "4085",
+      "name": "kishan",
+      "email": "kishanbhuva99@gmail.com",
+      "phone": "9998003879",
+      "message": "hi"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+@import url('font-face.css');
+:root
+{
+--bg-black:#211C24;
+--bg-light-black:#2C2C2C;
+--bg-white:#FFFFFF;
+--bg-light-gray:#909090;    
+--text-black:#211C24;
+--text-light-black:#2C2C2C;
+--text-white:#FFFFFF;
+--text-light-gray:#909090;    
+}
+body
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+box-sizing: border-box;    
+background-color: var(--bg-light-gray);
+}
+#cyber-header
+{
+width: 100%;
+height: auto;
+}
+#cyber-header h1 
+{
+color: var(--text-white);
+font-size: 85px !important;
+text-align: center;    
+font-family: inter-bold;
+}
+#cyber-header p 
+{
+width: 40%;
+height: auto;
+margin: auto;
+font-family: inter-regular;    
+color: var(--text-white);
+}
+#cyber-banner
+{
+
+width: 100%;
+height: auto;
+}
+#cyber-content
+{
+
+width: 100%;
+height: auto;
+}
+#cyber-footer
+{
+
+width: 100%;
+height: auto;
+}

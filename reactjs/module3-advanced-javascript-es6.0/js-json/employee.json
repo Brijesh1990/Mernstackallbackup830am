@@ -1,0 +1,61 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "salary": 75000
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "position": "Project Manager",
+      "salary": 85000
+    },
+    {
+      "id": 3,
+      "name": "Alice Johnson",
+      "position": "UX Designer",
+      "salary": 70000
+    }
+  ],
+
+  "company": {
+    "name": "Tech Innovations Inc.",
+    "location": "San Francisco, CA",
+    "established": 2010
+  },
+
+  "departments": [
+    {
+      "id": 1,
+      "name": "Engineering",
+      "head": "John Doe"
+    },
+    {
+      "id": 2,
+      "name": "Product Management",
+      "head": "Jane Smith"
+    },
+    {
+      "id": 3,
+      "name": "Design",
+      "head": "Alice Johnson"
+    }
+  ],
+
+  "projects": [
+    {
+      "id": 1,
+      "name": "Project Alpha",
+      "budget": 500000,
+      "deadline": "2024-12-31"
+    },
+    {
+      "id": 2,
+      "name": "Project Beta",
+      "budget": 300000,
+      "deadline": "2025-06-30"
+    }
+  ]
+}

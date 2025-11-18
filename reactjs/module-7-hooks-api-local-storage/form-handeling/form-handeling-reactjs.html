@@ -1,0 +1,34 @@
+what is form-handeling-react js ?
+handel form data inside of react js there we used form handeling 
+using form handeling we stored curect object data and render on broswers
+Form data is handled by React state.
+Input values are set via state and updated with event handlers.
+
+
+types of form handeling components inside of react js 
+
+ a)controlled components
+   function MyForm() {
+  const [value, setValue] = React.useState('');
+  return (
+    <input
+      value={value}
+      onChange={e => setValue(e.target.value)}
+    />
+  );
+}
+  
+ b) uncontrolled components 
+
+ function MyForm() {
+  const inputRef = React.useRef();
+  function handleSubmit() {
+    alert(inputRef.current.value);
+  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <input ref={inputRef} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}

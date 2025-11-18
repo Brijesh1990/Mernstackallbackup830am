@@ -1,0 +1,19 @@
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+box-sizing: border-box;  
+}
+.theme 
+{
+ width: 250px;
+ height: auto;
+ margin: auto;
+ padding: 10px;
+ background-color: gray;
+ color: black;
+ margin-left: 35%;
+ border: 0; 
+ margin-top: 5%;
+}

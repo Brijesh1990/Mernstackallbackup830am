@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(0, 0, 155, 0.8), rgba(0, 0, 200, 0.5)),
+    url('https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?cs=srgb&dl=pexels-pixabay-302769.jpg&fm=jpg')
+      no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#aos-app {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  margin-top: 8%;
+  padding: 20px;
+  line-height: 0.5;
+}
+#aos-app h1 {
+  font-size: 85px;
+  font-weight: 700;
+  text-align: center;
+}
+#aos-app p {
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+.scroll {
+  font-size: 23px !important;
+  margin-top: 15% !important;
+}
+.arrow {
+  animation: 2s bounce infinite;
+}
+
+#aos-fade {
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+#aos-fade h1 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+#aos-fade hr {
+  border: solid 1px white;
+}
+
+.box1 {
+  width: 60%;
+  height: auto;
+  margin: auto;
+  padding: 50px 25px;
+  background-color: black;
+  border: solid 10px white;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10%;
+  float: left;
+}
+
+.box2 {
+  width: 60%;
+  height: auto;
+  margin: auto;
+  padding: 50px 25px;
+  background-color: black;
+  border: solid 10px white;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10%;
+  float: right;
+}
+
+.clearfix {
+  clear: both !important;
+}
