@@ -1,0 +1,100 @@
+what is sql ?
+ sql stands for structured query language 
+ sql is used to create database and table structured 
+ sql is used to insert , update and delete data  
+ sql is case insestive language
+ examples : INSERT , insert 
+what is difference between SQL and MYSql
+
+  SQL ....
+     sql stands for structured query language 
+     sql is used to create database and table structured 
+     sql is used to insert , update and delete data  
+     sql is case insestive language
+     examples : INSERT , insert 
+
+  MySql ....
+     Mysql is a database where we can stored an information about tables in         form of rows and columns.
+     database is used to stored an informations of users i.e      called database  
+     Mysql is a case-senstive.  
+
+     examples : 1) mysql_query()
+                2) mysql_fetch_array()
+                3) mysql_fetch_object()
+                4) mysql_fetch_assoc()
+                5) mysql_num_rows()    
+                5) con=mysql_connect("localhost","root,"","dbname");  
+
+ 
+ sql used some commands or query....
+
+ a) DDL(data definition language)
+      examples : ddl involved to create database strucrures and table structures 
+                 a) create b) alter c) rename | truncate
+                
+                 1) how to create database 
+                    create database databasename;
+
+                 2) how to create table  
+                    create table tablename
+                    (
+                     columnname int size auto_increment primary key,
+                     columnname varchar(0-255),
+                     columnname text,
+                     columnname varachar(255),
+                     price float,
+                     datetime datetime,
+                     date date,
+                     phone bigInt
+                    )
+
+
+examples : 
+
+CREATE TABLE `flipkart`.`contact` (
+ contactid int auto_increment primary key,
+ name varchar(255),
+ email varchar(255),
+ phone bigInt,
+ subject varchar(255),
+ message text
+
+);
+ 
+
+CREATE TABLE `flipkart`.`categories` (
+  
+categoryid int primary key  auto_increment,
+categoryname varchar(255)
+
+);
+
+
+alter : alter is used to add | modify or update any columnname
+examples : 
+
+ alter table flipkart.contact change phone mobile bigInt;
+ alter table flipkart.contact add added_date varchar(255);
+ Alter table flipkart.contact add photo varchar(255) after mobile;
+
+rename : rename is used to change name of table
+
+  rename table flipkart.categories to flipkart.flip_categories
+  rename table flipkart.contact to flipkart.flip_contact
+    
+ b) DML(data manupulation language)
+ c) DQL(data query language)
+ d) TCL(trasactional query language)   
+
+
+
+truncate : truncate is used to empty all data or delete all data from tables
+           NOTE : after truncate we can not rollback data
+
+            truncate table flipkart.flip_categories;
+
+DML : data manuulation language
+
+      a) insert :  
+
+       insert into flipkart.flip_categories values(null,'Electronics'),(null,'Furnitures'),(null,'Mens shirts'),(null,'Womens shirt')      
