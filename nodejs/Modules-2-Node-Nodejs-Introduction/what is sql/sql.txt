@@ -160,7 +160,115 @@ DML : data manupulation language
 
 
 
-       SQL function :  
+       SQL function :
+                There are two types of sql function ...
+                a) scalar function 
+                   1) first 2) last 3) lcase 4) ucase
+                   1) select first from flipkart.flip_employee
+                   2) select last from flipkart.flip_employee
+                   3) select lcase(name) from flipkart.flip_employee
+                   4) select ucase(name) from flipkart.flip_employee 
+
+                b) aggrigate function
+ 
+                   1)sum 2)avg 3)max 4)min 5)count   
+
+                   1)select sum(salary) from flipkart.flip_employee;
+                   2)select avg(salary) from flipkart.flip_employee;
+                   3)select max(salary) from flipkart.flip_employee;
+                   4)select min(salary) from flipkart.flip_employee;
+                   5)select count(empid) from flipkart.flip_employee; 
+
+
+                 Note : how to find second highest salary
+
+                 applied subquery ....(query within another i.e called subquery)
+
+                 select max(salary) from flipkart.flip_employee where salary<(select max(salary) from                  flipkart.flip_employee); 
+
+
+
+  4) TCL : transaction query language 
+
+            1) commit 
+                 start transaction;
+delete from flipkart.flip_employee where empid=1;
+commit;
+            2) rollback     
+
+            start transaction;
+select * from flipkart.flip_employee where empid=1;
+rollback;
+
+
+                 
+       Key constraints ..                 
+
+       key contsraints is set a limit on tables ...
+
+       types of key constraints ...
+       a) primary key(pk)
+       b) foreign key (fk)
+       c) unique key (uk)
+       d) compound key (ck)   
+
+       primary key : A pk is provides only one times in a tables 
+                     A pk never returns a null value
+                     A pk provides a unique values 
+                     A pk is always auto_increments
+
+ CREATE TABLE `flipkart`.`contact` (
+ contactid int auto_increment primary key,
+ name varchar(255),
+ email varchar(255),
+ phone bigInt,
+ subject varchar(255),
+ message text
+
+);
+
+
+       unique key :  A uk is provides more than one times in a tables 
+                     A uk only one times returns a null value
+                     A pk provides a unique values 
+                     A pk is always auto_increments
+
+                    alter TABLE flipkart.flip_employee ADD UNIQUE(`mobile`)
+                    alter TABLE flipkart.flip_employee ADD UNIQUE(`email`)
+
+
+    foreign key : foreign key is used to provides relationship between one tables to another tables 
+                  fk is more than one time in tables
+                  fk is never return null values
+
+                  tbl_college
+
+                collegeid     collegename  
+                1             marwadi  
+                2             vvp 
+                3             darshan
+
+                tbl_students  
+ 
+                studenteid    studentname  
+                1             kishan  
+                2             divesh 
+                3             milan
+
+
+                tbl_teacher
+
+                teacher_id(pk)  collegeid(fk)   studnetid(fk)  name  age   mobile department  address
+
+                1                3               2             brijesh 34  954555  IT          rjt         
+                
+
+ 
+
+     
+
+                     
+                                       
 
 
  
