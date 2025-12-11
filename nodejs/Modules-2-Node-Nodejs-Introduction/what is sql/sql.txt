@@ -143,6 +143,10 @@ DML : data manupulation language
             h) select * from flipkart.flip_employee where empid limit 4,2; 
             
 
+        alias : alias is used to create a nick name of any table of columnname
+
+                select studentid,studentname as stdname from flipkart.flip_student
+                    
            order by and group by ....
 
            order by : filter or select data in assending or decending order ...
@@ -212,7 +216,7 @@ rollback;
        c) unique key (uk)
        d) compound key (ck)   
 
-       primary key : A pk is provides only one times in a tables 
+1)primary key : A pk is provides only one times in a tables 
                      A pk never returns a null value
                      A pk provides a unique values 
                      A pk is always auto_increments
@@ -228,7 +232,7 @@ rollback;
 );
 
 
-       unique key :  A uk is provides more than one times in a tables 
+2)unique key :  A uk is provides more than one times in a tables 
                      A uk only one times returns a null value
                      A pk provides a unique values 
                      A pk is always auto_increments
@@ -237,11 +241,11 @@ rollback;
                     alter TABLE flipkart.flip_employee ADD UNIQUE(`email`)
 
 
-    foreign key : foreign key is used to provides relationship between one tables to another tables 
+3)foreign key :   foreign key is used to provides relationship between one tables to another tables 
                   fk is more than one time in tables
                   fk is never return null values
 
-                  tbl_college
+                tbl_college
 
                 collegeid     collegename  
                 1             marwadi  
@@ -262,11 +266,72 @@ rollback;
 
                 1                3               2             brijesh 34  954555  IT          rjt         
                 
+How to create a foreign key via sql...
 
+create table flipkart.flip_teacher(
+teacherid int primary key auto_increment,
+collegid int references flipkart.flip_college(collegid),
+studentid int references flipkart.flip_student(studentid),
+name varchar(255),
+phone bigInt,
+address text,
+education varchar(255),
+salary float,
+department varchar(255)
+)
+
+
+sql join ... 
+
+             a) inner join 
+                examples : 
+                   select flipkart.flip_teacher.*,collegename,studentname from flipkart.flip_teacher inner join flipkart.flip_college on flipkart.flip_teacher.collegid=flipkart.flip_college.collegid inner join  flipkart.flip_student on flipkart.flip_teacher.studentid=flipkart.flip_student.studentid
+ 
+             b) join 
+               examples :
+select flipkart.flip_teacher.*,collegename,studentname from flipkart.flip_teacher  join flipkart.flip_college on flipkart.flip_teacher.collegid=flipkart.flip_college.collegid  join  flipkart.flip_student on flipkart.flip_teacher.studentid=flipkart.flip_student.studentid
+ 
+                   or 
+
+select teacherid,name,phone,address,department,collegename,studentname from flipkart.flip_teacher  join flipkart.flip_college on flipkart.flip_teacher.collegid=flipkart.flip_college.collegid  join  flipkart.flip_student on flipkart.flip_teacher.studentid=flipkart.flip_student.studentid
+ 
+             c) outer join 
+                   1) left join 
+                         data matched from first table to second table with its left rows if matched                            join otherwise return null values.
+
+                       examples : 
+select teacherid,name,phone,address,department,collegename,studentname from flipkart.flip_teacher left join flipkart.flip_college on flipkart.flip_teacher.collegid=flipkart.flip_college.collegid  left join  flipkart.flip_student on flipkart.flip_teacher.studentid=flipkart.flip_student.studentid
+
+                   2) right join 
+                          data matched from second table to first table with its right rows if matched                            join otherwise return null values.
+                           examples: 
+select teacherid,name,phone,address,department,collegename,studentname from flipkart.flip_teacher right join flipkart.flip_college on flipkart.flip_teacher.collegid=flipkart.flip_college.collegid  right join  flipkart.flip_student on flipkart.flip_teacher.studentid=flipkart.flip_student.studentid
  
 
-     
+                   3) full join 
+                           full join = left join + right join 
+                           note: not supported in mysql
 
+              d) cross join 
+
+                        crosss join join tables with multiply by data;
+                        examples : select * from flipkart.flip_teacher cross join flipkart.flip_student 
+                          
+
+             Note : join is used to join more than one tables with its common field if data matched                     join if datanot matched return null values.
+                                 
+
+indexer :indexer or index used to create to fast lookup or search data there used index 
+         or 
+         index create for did speed optimized of tables 
+       
+         examples : create index index_name on tablename(columnname1,columname2......)  
+
+view :   view create  a dublicate tables of any original tables there we create a view
+
+         Note : if user want to hide some data from some another users there we create view
+
+create view flipkart.view_flip_teacher  as select teacherid,name,salary,department from flipkart.flip_teacher where teacherid in(1,3)
                      
                                        
 
