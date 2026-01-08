@@ -1,0 +1,79 @@
+<!-- load add category admin -->
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+<body class="app">   	
+<div class="app-wrapper">	    
+<div class="app-content pt-3 p-md-3 p-lg-4">
+<div class="container-xl">
+<h1 class="app-page-title">Add Category here</h1>
+
+<div class="row">
+  <div class="col-12 col-md-8 col-lg-6">
+    <div class="app-card app-card-settings shadow-sm p-4">
+      
+      <form>
+        <!-- Category Name -->
+        <div class="mb-3">
+          <label for="categoryName" class="form-label">Category Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="categoryName"
+            placeholder="Enter category name"
+            required
+          >
+        </div>
+
+        <!-- Category Description -->
+        <div class="mb-3">
+          <label for="categoryDescription" class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            id="categoryDescription"
+            rows="3"
+            placeholder="Optional description"
+          ></textarea>
+        </div>
+
+        <!-- Status -->
+        <div class="mb-3">
+          <label for="categoryStatus" class="form-label">Status</label>
+          <select class="form-select" id="categoryStatus">
+            <option value="1">Active</option>
+            <option value="0">Inactive</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">
+            Add Category
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+</div><!--//row-->
+</div><!--//app-card-header-->
+<div class="app-card-body px-4 w-100">
+
+
+
+</div><!--//row-->
+</div><!--//item-->
+</div><!--//app-card-body-->
+
+</div><!--//app-card-->
+</div><!--//col-->
+
+</div><!--//row-->
+
+</div><!--//container-fluid-->
+</div><!--//app-content-->	    
+</div><!--//app-wrapper-->    					
+<%- include('./partials/footer') %>

@@ -1,0 +1,85 @@
+<!-- load add manage category admin -->
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+<body class="app">   	
+<div class="app-wrapper">	    
+<div class="app-content pt-3 p-md-3 p-lg-4">
+<div class="container-xl"> 
+<div class="row g-3 mb-4 align-items-center justify-content-between">
+<div class="col-auto">
+<h1 class="app-page-title mb-0">Manage all category</h1>
+</div>
+
+
+<div class="row">
+  <div class="col-12">
+    <div class="app-card app-card-settings shadow-sm p-4">
+      
+      <div class="app-card-body">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Category Name</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th class="text-end">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Electronics</td>
+                <td>Electronic items and gadgets</td>
+                <td>
+                  <span class="badge bg-success">Active</span>
+                </td>
+                <td class="text-end">
+                  <a href="#" class="btn btn-sm btn-outline-primary">
+                    Edit
+                  </a>
+                  <a href="#" class="btn btn-sm btn-outline-danger">
+                    Delete
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Fashion</td>
+                <td>Clothing and accessories</td>
+                <td>
+                  <span class="badge bg-secondary">Inactive</span>
+                </td>
+                <td class="text-end">
+                  <a href="#" class="btn btn-sm btn-outline-primary">
+                    Edit
+                  </a>
+                  <a href="#" class="btn btn-sm btn-outline-danger">
+                    Delete
+                  </a>
+                </td>
+              </tr>
+
+              <!-- More rows -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div><!--//table-responsive-->
+</div><!--//app-card-body-->		
+</div><!--//app-card-->
+</div><!--//tab-pane-->
+</div><!--//tab-content-->
+
+</div><!--//container-fluid-->
+</div><!--//app-content-->  
+</div><!--//app-wrapper-->    
+<%- include('./partials/footer') %>					
+
