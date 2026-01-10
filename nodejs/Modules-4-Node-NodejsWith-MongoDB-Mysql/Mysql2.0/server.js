@@ -1,7 +1,6 @@
 const express=require('express');
 const app=express();
 const port=3000;
-
 // create mysql2 connection
 const mysql2=require('mysql2');
 const db=mysql2.createConnection({
@@ -140,14 +139,14 @@ db.connect((err)=>{
 // });
 
 // create a query to count total contacts
-const countQuery=`SELECT COUNT(*) AS totalContactsData FROM contact`;
-db.query(countQuery,(err,results)=>{
-    if(err){
-        console.error('Error counting contacts:',err);
-        return;
-    }
-    console.log('Total Contacts:',results[0].totalContactsData);
-});
+// const countQuery=`SELECT COUNT(*) AS totalContactsData FROM contact`;
+// db.query(countQuery,(err,results)=>{
+//     if(err){
+//         console.error('Error counting contacts:',err);
+//         return;
+//     }
+//     console.log('Total Contacts:',results[0].totalContactsData);
+// });
 
 // create a insert query
 
