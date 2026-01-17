@@ -13,6 +13,19 @@
 <small class="text-muted">Sharanya!</small>
 </div>
 </div>
+<!-- pass a success flash messages -->
+<% if(success.length) { %> 
+<div class="alert alert-success w-100 mx-auto" role="alert">
+ <span class="text-dark"><%= success %></span>   
+</div>
+<% } %> 
+
+<!-- pass error flash messages -->
+<% if(error.length) { %> 
+<div class="alert alert-danger w-100 mx-auto" role="alert">
+ <span class="text-dark"><%= error %></span>   
+</div>
+<% } %> 
 <!-- Important -->
 <div class="section-title">IMPORTANT</div>
 
