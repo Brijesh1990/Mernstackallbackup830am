@@ -27,33 +27,26 @@
 </div>
 <% } %> 
 <!-- Important -->
-<div class="section-title">IMPORTANT</div>
+<div class="section-title">Manage All Task</div>
+<!-- display all dynamic task  -->
 
-<div class="task-card task-important">
-<div>
-<strong>Client Work</strong><br>
-<small>10am - 2pm</small>
-</div>
-<div class="circle-check"></div>
-</div>
+<div class="task-card shadow flex flex-wrap">
 
-<div class="task-card task-normal">
-<div>
-<strong>Evening Walk</strong><br>
-<small>6pm</small>
+<% data.forEach(items=>{ %>   
+<div class="w-100">
+<strong>Task : <span class="text-success"><%= items.title %></span></strong><br>
+<strong>Task types : <span class="text-success"><%= items.tasktype %></span></strong><br>
+<strong>Added Date : <span class="text-success"><%= items.added_date %></span></strong><br>
+<small>Start and End Time : <%= items.start_time %> - <%= items.end_time %></small>
 </div>
-<div class="circle-check border-secondary"></div>
-</div>
+<div class="w-100 mt-2">
+<a href="/delete/<%= items.id %>" onclick="return confirm('Are you sure to delete task ?')"><button type="button" class="btn btn-sm btn-danger text-white"><span class="">Delete</span></button></a>
 
-<!-- Todo -->
-<div class="section-title">TO DO</div>
-
-<div class="task-card task-normal">
-<div>
-<strong>Buy Groceries</strong><br>
-<small>7pm - 7:40pm</small>
+<a href="/edit/<%= items.id %>" onclick="return confirm('Are you sure to Edit task ?')"><button type="button" class="btn btn-sm btn-primary text-white"><span class="">Edit</span></button></a>
 </div>
-<div class="circle-check border-secondary"></div>
+<%  }) %>
+
+
 </div>
 
 <!-- Floating Button -->

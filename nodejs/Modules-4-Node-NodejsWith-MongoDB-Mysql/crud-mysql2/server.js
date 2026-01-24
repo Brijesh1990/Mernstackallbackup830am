@@ -80,10 +80,20 @@ app.get('/',((req,res)=>{
 res.render('index',{title:'Node js Task Manager APP Home Page(MYSQL2)'});
 }))
 
-
-// create a routing of add dashboard ....
+// create a routing of add dashboard & manage all task or read all task....
 app.get('/dashboard',((req,res)=>{
-res.render('dashboard',{title:'Node js Task Manager APP :: Dashboard'});
+    // read all task 
+    db.query("select * from addtask",(err,rows)=>{
+        if(err) 
+        {
+            req.flash("error",err.message);
+            res.render("dashboard",{data:[]});
+        }
+        else 
+        {
+            res.render("dashboard",{data:rows,title:'Node js Task Manager APP :: Dashboard'});
+        }
+    })
 }))
 
 // used mysql2 to insert data via post method (create a insert)
@@ -112,7 +122,70 @@ app.post('/dashboard',(req,res)=>{
 });
 
 
-// create a routing of add manage task ....
+// create a routing for delete a task 
+app.get("/delete/:id",(req,res)=>{
+    db.query("delete from addtask where id=?",[req.params.id],
+        (err)=>{
+
+            if(err)
+            {
+                req.flash("error","Task not Deleted");
+            }
+            else 
+            {
+                req.flash("success","Task successfully Deleted")
+            }
+            res.redirect("/dashboard");
+        }
+    )
+})
+
+
+// create a routing to edit task 
+app.get("/edit/:id",(req,res)=>{
+    db.query("select * from addtask where id=?",[req.params.id],
+        
+        (err,rows)=>{
+
+            if(err)
+            {
+                req.flash("error","Task not found");
+                res.redirect("/dashboard");
+            }
+            else 
+            {
+              res.render("edit",{data:rows[0]});
+       
+            }
+        }
+    )
+})
+// create routing to update data
+app.post("/update/:id",(req,res)=>{
+    // stored all data for update 
+    const {title,tasktype,added_date,start_time,end_time,description} =req.body;
+    const id = req.params.id;
+    db.query(
+        "UPDATE addtask SET title=?, tasktype=?, added_date=?, start_time=?, end_time=?, description=? WHERE id=?",
+        [title, tasktype, added_date, start_time, end_time, description, id],
+        
+        (err)=>{
+
+            if(err)
+            {
+                req.flash("error","Task not found");
+                
+            }
+            else 
+            {
+                req.flash("success","Task successfully updated");
+                res.redirect('/dashboard');
+            }
+           
+        }
+    )
+})
+// create a routing of add manage task or read task ....
 app.get('/managetask',((req,res)=>{
 res.render('managetask',{title:'Node js Task Manager APP :: Dashboard'});
 }))
