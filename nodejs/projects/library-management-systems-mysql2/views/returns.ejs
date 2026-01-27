@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('./partials/navigation') %>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-undo"></i> Book Returns</h1>
+            <a href="/return-book" class="btn btn-primary"><i class="fas fa-plus"></i> Record Return</a>
+        </div>
+
+        <% if(success && success.length > 0) { %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="fas fa-check-circle"></i> <%= success %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        <% } %>
+
+        <% if(error && error.length > 0) { %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <i class="fas fa-exclamation-circle"></i> <%= error %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        <% } %>
+
+        <div class="table-container">
+            <% if(data && data.length > 0) { %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student Name</th>
+                            <th>Book Name</th>
+                            <th>Assigned Date</th>
+                            <th>Return Date</th>
+                            <th>Condition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.forEach(returnRecord => { %>
+                            <tr>
+                                <td><%= returnRecord.id %></td>
+                                <td><strong><%= returnRecord.student_name %></strong></td>
+                                <td><%= returnRecord.book_name %></td>
+                                <td><%= new Date(returnRecord.assignment_date).toLocaleDateString() %></td>
+                                <td><%= new Date(returnRecord.return_date).toLocaleDateString() %></td>
+                                <td>
+                                    <% 
+                                        let conditionColor = '#17a2b8';
+                                        if(returnRecord.condition === 'Excellent') conditionColor = '#28a745';
+                                        if(returnRecord.condition === 'Damaged') conditionColor = '#dc3545';
+                                        if(returnRecord.condition === 'Lost') conditionColor = '#000000';
+                                    %>
+                                    <span class="badge" style="background-color: <%= conditionColor %>;">
+                                        <%= returnRecord.condition %>
+                                    </span>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            <% } else { %>
+                <div class="empty-state">
+                    <i class="fas fa-inbox"></i>
+                    <p>No returns recorded yet. <a href="/return-book">Record a return</a></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

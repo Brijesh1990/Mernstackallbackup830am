@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('./partials/navigation') %>
+    
+    <div class="container">
+        <div class="form-container" style="max-width: 600px; margin: 40px auto;">
+            <h1><i class="fas fa-undo"></i> Return Book</h1>
+
+            <% if(error && error.length > 0) { %>
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-circle"></i> <%= error %>
+                </div>
+            <% } %>
+
+            <form action="/return-book" method="POST" class="form">
+                <div class="form-group">
+                    <label for="assignment_id">Select Assignment</label>
+                    <select id="assignment_id" name="assignment_id" required>
+                        <option value="">-- Choose an Assignment --</option>
+                        <% if(assignments && assignments.length > 0) { %>
+                            <% assignments.forEach(assignment => { %>
+                                <option value="<%= assignment.id %>">
+                                    <%= assignment.student_name %> - <%= assignment.book_name %> (Assigned: <%= new Date(assignment.assignment_date).toLocaleDateString() %>)
+                                </option>
+                            <% }); %>
+                        <% } %>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="return_date">Return Date</label>
+                    <input type="date" id="return_date" name="return_date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="condition">Book Condition</label>
+                    <select id="condition" name="condition" required>
+                        <option value="">-- Select Condition --</option>
+                        <option value="Excellent">Excellent</option>
+                        <option value="Good">Good</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Damaged">Damaged</option>
+                        <option value="Lost">Lost</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Record Return</button>
+                    <a href="/returns" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

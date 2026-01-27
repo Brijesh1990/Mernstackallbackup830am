@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px 30px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar h2 {
+            font-size: 24px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .profile-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .profile-header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .profile-header .roll-number {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .profile-body {
+            padding: 40px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .info-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-group label {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .info-group p {
+            color: #333;
+            font-size: 16px;
+            word-break: break-word;
+        }
+
+        .divider {
+            height: 1px;
+            background: #eee;
+            margin: 30px 0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-edit {
+            background: #ffc107;
+            color: white;
+        }
+
+        .btn-edit:hover {
+            background: #e0a800;
+            transform: translateY(-2px);
+        }
+
+        .btn-back {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-back:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .badge-male {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .badge-female {
+            background: #f8bbd0;
+            color: #880e4f;
+        }
+
+        .badge-other {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h2><i class="fas fa-graduation-cap"></i> Student Management</h2>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/students">Dashboard</a>
+            <a href="/students/add">Add Student</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <h1><%= student.first_name %> <%= student.last_name %></h1>
+                <p class="roll-number"><i class="fas fa-id-card"></i> <%= student.roll_number %></p>
+            </div>
+
+            <div class="profile-body">
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>Email</label>
+                        <p><%= student.email %></p>
+                    </div>
+                    <div class="info-group">
+                        <label>Phone</label>
+                        <p><%= student.phone %></p>
+                    </div>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>Date of Birth</label>
+                        <p><%= student.date_of_birth.toLocaleDateString() %></p>
+                    </div>
+                    <div class="info-group">
+                        <label>Gender</label>
+                        <p>
+                            <%= student.gender %>
+                            <span class="badge <%= student.gender.toLowerCase() === 'male' ? 'badge-male' : student.gender.toLowerCase() === 'female' ? 'badge-female' : 'badge-other' %>">
+                                <%= student.gender %>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>Address</label>
+                        <p><%= student.address %></p>
+                    </div>
+                    <div class="info-group">
+                        <label>City</label>
+                        <p><%= student.city %></p>
+                    </div>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>State</label>
+                        <p><%= student.state %></p>
+                    </div>
+                    <div class="info-group">
+                        <label>Course</label>
+                        <p><%= student.course %></p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>Enrollment Date</label>
+                        <p><%= student.enrollment_date.toLocaleDateString() %></p>
+                    </div>
+                    <div class="info-group">
+                        <label>Current GPA</label>
+                        <p><strong><%= student.gpa %></strong></p>
+                    </div>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>Registered</label>
+                        <p><%= student.created_at.toLocaleDateString() %></p>
+                    </div>
+                    <div class="info-group">
+                        <label>Last Updated</label>
+                        <p><%= student.updated_at.toLocaleDateString() %></p>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <a href="/students/edit/<%= student.id %>" class="btn btn-edit">
+                        <i class="fas fa-edit"></i> Edit Student
+                    </a>
+                    <a href="/students" class="btn btn-back">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

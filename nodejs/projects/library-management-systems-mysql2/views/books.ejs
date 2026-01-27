@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('./partials/navigation') %>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-book-open"></i> Books Management</h1>
+            <a href="/add-book" class="btn btn-primary"><i class="fas fa-plus"></i> Add Book</a>
+        </div>
+
+        <% if(success && success.length > 0) { %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="fas fa-check-circle"></i> <%= success %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        <% } %>
+
+        <% if(error && error.length > 0) { %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <i class="fas fa-exclamation-circle"></i> <%= error %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        <% } %>
+
+        <div class="table-container">
+            <div class="search-box">
+                <form action="/search-books" method="POST" class="search-form">
+                    <input type="text" name="search" placeholder="Search by book name, author, ISBN, or category..." required>
+                    <button type="submit"><i class="fas fa-search"></i> Search</button>
+                </form>
+            </div>
+
+            <% if(data && data.length > 0) { %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Book Name</th>
+                            <th>Author</th>
+                            <th>ISBN</th>
+                            <th>Category</th>
+                            <th>Total Qty</th>
+                            <th>Available</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.forEach(book => { %>
+                            <tr>
+                                <td><%= book.id %></td>
+                                <td><strong><%= book.book_name %></strong></td>
+                                <td><%= book.author || '-' %></td>
+                                <td><span class="badge"><%= book.isbn || '-' %></span></td>
+                                <td><%= book.category || '-' %></td>
+                                <td><%= book.quantity %></td>
+                                <td>
+                                    <span class="badge" style="background-color: <%= book.available_quantity > 0 ? '#28a745' : '#dc3545' %>;">
+                                        <%= book.available_quantity %>
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="/edit-book/<%= book.id %>" class="btn btn-sm btn-info" title="Edit">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                                    <a href="/delete-book/<%= book.id %>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')" title="Delete">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            <% } else { %>
+                <div class="empty-state">
+                    <i class="fas fa-inbox"></i>
+                    <p>No books found. <a href="/add-book">Add a new book</a></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
