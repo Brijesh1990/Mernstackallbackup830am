@@ -440,6 +440,10 @@ table tbody tr:hover {
     color: #666;
     line-height: 1.6;
 }
+.text-success
+{
+ color: green !important;   
+}
 
 /* Responsive */
 @media (max-width: 768px) {

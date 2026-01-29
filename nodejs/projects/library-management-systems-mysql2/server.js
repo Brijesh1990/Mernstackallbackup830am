@@ -45,8 +45,8 @@ const createTablesQueries = [
     author VARCHAR(255),
     isbn VARCHAR(100) UNIQUE,
     category VARCHAR(100),
-    quantity INT DEFAULT 0,
-    available_quantity INT DEFAULT 0,
+    quantity INT,
+    available_quantity INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   )`,
   // Book assignments (when student takes a book)
@@ -55,7 +55,7 @@ const createTablesQueries = [
     student_id INT NOT NULL,
     book_id INT NOT NULL,
     assignment_date DATE NOT NULL,
-    approved INT DEFAULT 0,
+    approved INT,
     approval_date DATE,
     approved_by VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -67,7 +67,7 @@ const createTablesQueries = [
     id INT AUTO_INCREMENT PRIMARY KEY,
     assignment_id INT NOT NULL,
     return_date DATE,
-    condition VARCHAR(100),
+    bookcondition VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (assignment_id) REFERENCES book_assignments(id) ON DELETE CASCADE
   )`
@@ -159,7 +159,7 @@ app.get('/dashboard',((req,res)=>{
 // ==================== STUDENT ROUTES ====================
 // View all students
 app.get('/students',((req,res)=>{
-    db.query("SELECT * FROM students ORDER BY created_at DESC",(err,rows)=>{
+    db.query("SELECT * FROM students ORDER BY created_at ASC",(err,rows)=>{
         if(err){
             req.flash("error",err.message);
             res.render("students",{data:[]});
@@ -423,7 +423,7 @@ app.get("/approve-assignment/:id",(req,res)=>{
 // View all returns
 app.get('/returns',((req,res)=>{
     db.query(
-      `SELECT br.id, ba.id as assignment_id, s.student_name, b.book_name, ba.assignment_date, br.return_date, br.condition, ba.student_id, ba.book_id 
+      `SELECT br.id, ba.id as assignment_id, s.student_name, b.book_name, ba.assignment_date, br.return_date, br.bookcondition, ba.student_id, ba.book_id 
        FROM book_returns br 
        JOIN book_assignments ba ON br.assignment_id = ba.id 
        JOIN students s ON ba.student_id = s.id 
@@ -461,7 +461,7 @@ app.get('/return-book',((req,res)=>{
 
 // Insert book return
 app.post('/return-book',(req,res)=>{
-    const {assignment_id, return_date, condition} = req.body;
+    const {assignment_id, return_date, bookcondition} = req.body;
     
     // Get book_id from assignment
     db.query("SELECT book_id FROM book_assignments WHERE id=?", [assignment_id], (err, results) => {
@@ -471,9 +471,9 @@ app.post('/return-book',(req,res)=>{
         }
         
         const book_id = results[0].book_id;
-        const sql = `INSERT INTO book_returns(assignment_id, return_date, condition) VALUES (?, ?, ?)`;
+        const sql = `INSERT INTO book_returns(assignment_id, return_date, bookcondition) VALUES (?, ?, ?)`;
         
-        db.query(sql, [assignment_id, return_date, condition], (err, result) => {
+        db.query(sql, [assignment_id, return_date, bookcondition], (err, result) => {
             if(err){
                 console.error(err);
                 req.flash("error", "Book return cannot be recorded: " + err.message);

@@ -181,7 +181,7 @@ Flash Message (Success/Error)
 └─────────────────────────────┘
 ```
 
-## Database Schema
+## Database Schema or Data dictionary
 
 ### students Table
 ```

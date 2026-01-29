@@ -36,7 +36,6 @@ db.connect((err)=>{
 
 // });
 
-
 //create table country
 // const createTableQuery=`CREATE TABLE IF NOT EXISTS country (
 //     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -139,16 +138,14 @@ db.connect((err)=>{
 // });
 
 // create a query to count total contacts
-// const countQuery=`SELECT COUNT(*) AS totalContactsData FROM contact`;
-// db.query(countQuery,(err,results)=>{
-//     if(err){
-//         console.error('Error counting contacts:',err);
-//         return;
-//     }
-//     console.log('Total Contacts:',results[0].totalContactsData);
-// });
-
-// create a insert query
+const countQuery=`SELECT COUNT(*) AS totalContactsData FROM contact`;
+db.query(countQuery,(err,results)=>{
+    if(err){
+        console.error('Error counting contacts:',err);
+        return;
+    }
+    console.log('Total Contacts:',results[0].totalContactsData);
+});
 
 // create a server using listen method
 app.listen(port,()=>{
