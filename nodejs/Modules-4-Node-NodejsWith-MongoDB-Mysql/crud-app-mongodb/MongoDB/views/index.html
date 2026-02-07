@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Management System</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .sidebar-hidden {
+      transform: translateX(-100%);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+<div class="flex h-screen overflow-hidden">
+
+  <!-- Sidebar -->
+<aside id="sidebar"
+  class="fixed md:static z-40 w-64 bg-indigo-600 text-white h-full
+         transition-transform duration-300 ease-in-out sidebar-hidden md:translate-x-0">
+
+  <!-- Sidebar Header -->
+  <div class="flex items-center justify-between p-6 border-b border-indigo-400">
+    <span class="text-2xl font-bold">🎓 SMS</span>
+
+    <!-- Close Button (Mobile Only) -->
+    <button id="closeBtn"
+      class="md:hidden text-2xl font-bold hover:text-gray-200 transition">
+      ✕
+    </button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="mt-6 space-y-2 px-4">
+    <a href="#" class="block px-4 py-3 rounded hover:bg-indigo-500 transition">
+      📊 Dashboard
+    </a>
+    <a href="#" class="block px-4 py-3 rounded hover:bg-indigo-500 transition">
+      ➕ Add Student
+    </a>
+    <a href="#" class="block px-4 py-3 rounded hover:bg-indigo-500 transition">
+      👥 Manage Students
+    </a>
+  </nav>
+</aside>
+
+
+  <!-- Main Content -->
+  <div class="flex-1 flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white shadow p-4 flex items-center gap-4">
+      
+      <!-- Hamburger Button -->
+      <button id="menuBtn"
+        class="md:hidden relative w-8 h-8 flex flex-col justify-center items-center">
+        
+        <span class="bar top-bar"></span>
+        <span class="bar middle-bar"></span>
+        <span class="bar bottom-bar"></span>
+      </button>
+
+      <h1 class="text-xl font-semibold text-gray-700">
+        Student Management Dashboard
+      </h1>
+    </header>
+
+    <!-- Content -->
+    <main class="p-6 flex-1 overflow-y-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h2 class="text-gray-500">Total Students</h2>
+          <p class="text-4xl font-bold text-indigo-600 mt-2">120</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h2 class="text-gray-500">Add Student</h2>
+          <p class="text-green-600 font-semibold mt-4">Register New</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h2 class="text-gray-500">Manage Students</h2>
+          <p class="text-blue-600 font-semibold mt-4">View / Edit</p>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Hamburger Animation Styles -->
+<style>
+  .bar {
+    width: 24px;
+    height: 3px;
+    background-color: #111;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+
+  .open .top-bar {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .open .middle-bar {
+    opacity: 0;
+  }
+
+  .open .bottom-bar {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+</style>
+
+<!-- JS -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const closeBtn = document.getElementById("closeBtn");
+  const sidebar = document.getElementById("sidebar");
+
+  menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("sidebar-hidden");
+    menuBtn.classList.toggle("open");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.add("sidebar-hidden");
+    menuBtn.classList.remove("open");
+  });
+</script>
+
+
+</body>
+</html>
