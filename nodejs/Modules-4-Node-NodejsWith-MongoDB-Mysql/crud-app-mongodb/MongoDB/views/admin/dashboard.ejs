@@ -1,0 +1,76 @@
+<!-- used layout here -->
+<%- include('layout') %>
+<!-- used sidebar -->
+ <%- include('sidebar') %>
+<!-- CONTENT AREA -->
+<main class="flex-1 p-6 overflow-y-auto">
+<!-- Dashboard Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+<h2 class="text-gray-500 text-sm">Total Students</h2>
+<p class="text-2xl font-bold mt-2">1,250</p>
+</div>
+
+<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+<h2 class="text-gray-500 text-sm">Total Teachers</h2>
+<p class="text-2xl font-bold mt-2">75</p>
+</div>
+
+<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+<h2 class="text-gray-500 text-sm">Courses</h2>
+<p class="text-2xl font-bold mt-2">32</p>
+</div>
+
+<div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+<h2 class="text-gray-500 text-sm">Pending Fees</h2>
+<p class="text-2xl font-bold mt-2">$12,450</p>
+</div>
+
+</div>
+
+<!-- Student Table -->
+<div class="bg-white shadow rounded-lg overflow-hidden">
+<div class="px-6 py-4 border-b">
+<h2 class="text-lg font-semibold">Recent Students</h2>
+</div>
+
+<div class="overflow-x-auto">
+<table class="min-w-full text-sm text-left">
+<thead class="bg-gray-50 text-gray-600 uppercase text-xs">
+<tr>
+<th class="px-6 py-3">Name</th>
+<th class="px-6 py-3">Email</th>
+<th class="px-6 py-3">Age</th>
+<th class="px-6 py-3">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y">
+
+<tr class="hover:bg-gray-50">
+<td class="px-6 py-4">John Doe</td>
+<td class="px-6 py-4">john@example.com</td>
+<td class="px-6 py-4">20</td>
+<td class="px-6 py-4 text-green-600 font-medium">Active</td>
+</tr>
+
+<tr class="hover:bg-gray-50">
+<td class="px-6 py-4">Sarah Smith</td>
+<td class="px-6 py-4">sarah@example.com</td>
+<td class="px-6 py-4">22</td>
+<td class="px-6 py-4 text-yellow-500 font-medium">Pending</td>
+</tr>
+
+<tr class="hover:bg-gray-50">
+<td class="px-6 py-4">David Lee</td>
+<td class="px-6 py-4">david@example.com</td>
+<td class="px-6 py-4">19</td>
+<td class="px-6 py-4 text-green-600 font-medium">Active</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+<%- include('footer') %>

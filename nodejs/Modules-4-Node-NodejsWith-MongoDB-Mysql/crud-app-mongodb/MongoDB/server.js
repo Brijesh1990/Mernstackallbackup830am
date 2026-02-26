@@ -1,9 +1,11 @@
+// used express framework 
 const express=require("express");
 // connect app with mongoDB 
 const connectDB=require('./config/db.js');
 const session=require("express-session");
 const flash=require("connect-flash");
-require("dotenv").config();
+// require("dotenv").config();
+require('dotenv').config({ quiet: true });
 const app=express();
 // database used here
 connectDB();
