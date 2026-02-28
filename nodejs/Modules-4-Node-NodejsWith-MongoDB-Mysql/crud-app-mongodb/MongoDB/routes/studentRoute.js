@@ -15,6 +15,25 @@ router.get("/",(req,res)=>{
 router.get("/add-students",(req,res)=>{
     res.render("addstudent",{title:title});
 });
+// add students data in student collection 
+router.post("/add-students",async(req,res)=>{
+    // add data in student collection
+    const{name,email,age}=req.body;
+    const insertStudents=new Student({name,email,age});
+    // insert data in mongoDB collection using mongoose 
+    // check condition
+    try 
+    {
+    await insertStudents.save();
+      req.flash("success_msg", "Student added successfully");
+      res.redirect('/add-students');
+    }
+    catch(err){
+     
+          req.flash("error_msg", "Something went wrong check again");
+        
+    }
+})
 // manage students 
 router.get("/manage-students",(req,res)=>{
     res.render("managestudent",{title:title});
